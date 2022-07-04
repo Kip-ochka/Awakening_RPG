@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./awakening.css">
+  <title>awakening</title>
+</head>
+<body class="body">
+  <header class="header">
+    <img src="./images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
+  </header>
+  <main class="sheet">
+    <h1 class="sheet__title">Личное дело разведчика
+    </h1>
+    <div class="information">
+      <div class="sheet__wrapper sheet__wrapper_name_fio">
+        <label class="sheet__label">ФИО
+        </label>
+        <input class="sheet__input sheet__input_type_long" name="attr_name"" type="text"></input>
+      </div>
+      <div class="sheet__wrapper sheet__wrapper_name_level">
+        <label class="sheet__label">Уровень
+        </label>
+        <input type="number" name="attr_level" class="sheet__input sheet__input_type_small">
+      </div>
+      <div class="sheet__wrapper sheet__wrapper_name_age">
+        <label class="sheet__label">Возраст
+        </label>
+        <input type="number" name="attr_age" class="sheet__input sheet__input_type_small">
+      </div>
+      <div class="sheet__wrapper sheet__wrapper_name_background">
+        <label class="sheet__label" class="sheet__label ">Прошлое
+        </label>
+        <input type="text" name="attr_back" class="sheet__input sheet__input_type_medium">
+      </div>
+      <div class="sheet__wrapper sheet__wrapper_name_rank">
+        <label class="sheet__label">Звание
+        </label>
+        <select name="attr_rang" class="sheet__selects sheet__selects_type_rank">
+          <option value="-1" selected="selected">Рядовой</option>
+          <option value="0">Командир группы</option>
+          <option value="1">Сержант</option>
+          <option value="2">Лейтенант</option>
+          <option value="3">Капитан</option>
+        </select>
+      </div>
+      <div class="sheet__wrapper ">
+        <label class="sheet__label">Соц.группа
+        </label>
+        <select name="attr_grup" class="sheet__selects sheet__selects_type_grup">
+          <option value="0">Без группы</option>
+          <option value="1">Механик-водитель</option>
+          <option value="2">Кадровый военный</option>
+          <option value="3">Милиционер</option>
+          <option value="4">Колхозник-аграрий</option>
+          <option value="5">Городской трудяга</option>
+          <option value="6">Молодой учёный</option>
+          <option value="7">Практикующий медик</option>
+          <option value="8">Квалифицированный инженер</option>
+          <option value="9">Работник культуры</option>
+          <option value="10">Профессиональный спортсмен</option>
+          <option value="11">Партийный чиновник</option>
+          <option value="12">Работник лесохозяйства</option>
+        </select>
+      </div>
+    </div>
+    <div class="attrbute">
+      <div class="attrbute__str">
+
+      </div>
+      <div class="attrbute__agil">
+
+      </div>
+      <div class="attrbute__int">
+        
+      </div>
+    </div>
+  </main>
+</body>
+</html>
