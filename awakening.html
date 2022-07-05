@@ -6,38 +6,38 @@
   <link rel="stylesheet" href="./awakening.css">
   <title>awakening</title>
 </head>
-<body class="body">
-  <header class="header">
+<body class="main__wrapper">
+  <div class="header">
     <img src="./images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
-  </header>
-  <main class="sheet">
-    <h1 class="sheet__title">Личное дело разведчика
+  </div>
+  <div class="info">
+    <h1 class="info__title">Личное дело разведчика
     </h1>
     <div class="information">
-      <div class="sheet__wrapper sheet__wrapper_name_fio">
-        <label class="sheet__label">ФИО
+      <div class="info__wrapper info__wrapper_name_fio">
+        <label class="info__label">ФИО
         </label>
-        <input class="sheet__input sheet__input_type_long" name="attr_name"" type="text"></input>
+        <input type="text" name="attr_name"  class="info__input info__input_type_information-fio"></input>
       </div>
-      <div class="sheet__wrapper sheet__wrapper_name_level">
-        <label class="sheet__label">Уровень
+      <div class="info__wrapper info__wrapper_name_level">
+        <label class="info__label">Уровень
         </label>
-        <input type="number" name="attr_level" class="sheet__input sheet__input_type_small">
+        <input type="number" name="attr_level" class="info__input info__input_type_information-numbers">
       </div>
-      <div class="sheet__wrapper sheet__wrapper_name_age">
-        <label class="sheet__label">Возраст
+      <div class="info__wrapper info__wrapper_name_age">
+        <label class="info__label">Возраст
         </label>
-        <input type="number" name="attr_age" class="sheet__input sheet__input_type_small">
+        <input type="number" name="attr_age" class="info__input info__input_type_information-numbers">
       </div>
-      <div class="sheet__wrapper sheet__wrapper_name_background">
-        <label class="sheet__label" class="sheet__label ">Прошлое
+      <div class="info__wrapper info__wrapper_name_background">
+        <label class="info__label" class="info__label ">Прошлое
         </label>
-        <input type="text" name="attr_back" class="sheet__input sheet__input_type_medium">
+        <input type="text" name="attr_back" class="info__input info__input_type_information-background">
       </div>
-      <div class="sheet__wrapper sheet__wrapper_name_rank">
-        <label class="sheet__label">Звание
+      <div class="info__wrapper info__wrapper_name_rank">
+        <label class="info__label">Звание
         </label>
-        <select name="attr_rang" class="sheet__selects sheet__selects_type_rank">
+        <select name="attr_rang" class="info__selects info__selects_type_rank">
           <option value="-1" selected="selected">Рядовой</option>
           <option value="0">Командир группы</option>
           <option value="1">Сержант</option>
@@ -45,10 +45,10 @@
           <option value="3">Капитан</option>
         </select>
       </div>
-      <div class="sheet__wrapper ">
-        <label class="sheet__label">Соц.группа
+      <div class="info__wrapper info__wrapper_name_rank">
+        <label class="info__label">Соц.группа
         </label>
-        <select name="attr_grup" class="sheet__selects sheet__selects_type_grup">
+        <select name="attr_grup" class="info__selects info__selects_type_grup">
           <option value="0">Без группы</option>
           <option value="1">Механик-водитель</option>
           <option value="2">Кадровый военный</option>
@@ -65,17 +65,65 @@
         </select>
       </div>
     </div>
-    <div class="attrbute">
-      <div class="attrbute__str">
-
+  </div>
+    <div class="attribute">
+      <div class="attribute__wrapper">
+        <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str" 
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">Крепость
+        </button>
+       <input type="number" name="attr_str" class="attribute__input">
+       <div class="attribute__button-wrapper">
+          <button type='roll' name='attr_rollstradv' class="button button__advantage" 
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}">
+          +</button>
+          <button type='roll' name='attr_rollstrdis' class="button button__disadvantage"
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}">
+          -</button>
+        </div>
       </div>
-      <div class="attrbute__agil">
-
+      <div class="attribute__wrapper">
+        <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil" 
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">Ловкость
+        </button>
+        <input type="number" name="attr_dex" class="attribute__input">
+        <div class="attribute__button-wrapper">
+        <button type='roll' name='attr_rolldexadv' class="button button__advantage"
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}">
+          +</button>
+          <button type='roll' name='attr_rollstrdis' class="button button__disadvantage"
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}">
+          -</button>
+        </div> 
       </div>
-      <div class="attrbute__int">
-        
+      <div class="attribute__wrapper ">
+        <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int" 
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">Интеллект
+        </button>
+        <input type="number" name="attr_int" class="attribute__input">
+        <div class="attribute__button-wrapper">
+          <button type='roll' name='attr_rollintadv' class="button button__advantage"
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}">
+          +</button>
+          <button type='roll' name='attr_rollintdis' class="button button__disadvantage"
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}">
+          -</button>
+        </div>
       </div>
     </div>
-  </main>
+  
+    <rolltemplate class="sheet-rolltemplate-customcheck">
+      <div><span class="sheet-rolltemplate-customcheck__bold">{{name}}</span> проверяет {{naming_attr}}</div>
+      <div>{{result}} vs {{check}}</div>
+      {{#rollTotal() result check}}
+      <div><span class="sheet-rolltemplate-customcheck__bold">ПРОВАЛ</span></div>
+      {{/rollTotal() result check}}
+      {{#rollLess() result check}}
+      <div><span class="sheet-rolltemplate-customcheck__bold">УСПЕХ</span></div>
+      {{/rollLess() result check}}
+      {{#rollGreater() result check}}
+      <div><span class="sheet-rolltemplate-customcheck__bold">ПРОВАЛ</span></div>
+      {{/rollGreater() result check}}
+  </rolltemplate>
+  
 </body>
 </html>
