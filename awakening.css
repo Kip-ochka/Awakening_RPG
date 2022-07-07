@@ -5,7 +5,7 @@
   background-image: url(./images/awakening_top_background.png), url(./images/awakening_bottom_background.jpg);
   background-repeat: no-repeat, repeat;
   background-position: center, left top;
-  background-size: 25%, auto;
+  background-size: 40%, auto;
   width: 1000px;
   display: flex;
   flex-wrap: wrap;
@@ -234,7 +234,8 @@
   align-items:center;
   flex-direction: column;
   border: 1px solid #ccc;
-  gap:10px 0;
+  border-radius:3px;
+  gap:9px 0;
   padding-bottom: 3px;
   max-height: 350px;
 }
