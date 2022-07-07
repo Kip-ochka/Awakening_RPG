@@ -11,8 +11,6 @@
     <img src="./images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
   </div>
   <div class="info">
-    <h1 class="info__title">Личное дело разведчика
-    </h1>
     <div class="information">
       <div class="info__wrapper info__wrapper_name_fio">
         <label class="info__label">ФИО
@@ -118,9 +116,9 @@
     </div>
     <div class="char-features">
       <div class="char-feature char-feature_type_health">
-        <h2 class="char-feature__label">
-          Пункты прочности
-        </h2>
+        <label class="char-feature__title">
+          ПП
+        </label>
         <div class="char-features__input-wrapper">
           <label class="char-feature__label">
             Текущие
@@ -141,29 +139,47 @@
           Уровень</button>
       </div>
       <div class="char-feature char-feature_type_battle">
-        <h2 class="char-feature">Тактико-технические характеристики
-        </h2>
+        <label class="char-feature__title"">ТТХ
+        </label>
         <button type='roll' class="char-feature__button" name='rank_init_roll'
           value="&{template:rankinit} {{name=@{name}}} {{result=[[1d6+@{rank}]]}}">
           Инициатива</button>
         <div class="char-features__input-wrapper">
-          <label class="char-feature__label">Защита</label>
+          <label class="char-feature__label">
+            Защита
+          </label>
           <input type="number" class="char-feature__input"  name="attr_ac">
         </div>
-        <button type='roll'>Оборона</button>
-        <button type='roll'>Маневр</button>
-        <button type='roll'>Выбывание</button>
+        <div class="char-feature__button-wrapper">
+        <button type='roll' name="sheet-rank_def_meele_roll" class="char-feature__button char-feature__button_half"
+          value="&{template:defense} {{name=@{name}}} {{naming_attr=защищается в рукопашной}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
+          Оборона</button>
+        <button type='roll' name="sheet-rank_def_fire_roll" class="char-feature__button char-feature__button_half"
+          value="&{template:defense} {{name=@{name}}} {{naming_attr=маневрирует и уклоняется}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
+          Маневр</button>
+        </div>
+        <button type='roll' name="sheet-rank_death_roll" class="char-feature__button"
+          value="&{template:death} {{name=@{name}}} {{result=[[1d6]]}} {{alive=[[1d4]]}} {{unconscious=[[3d6]]}} {{shoked=[[1d6]]}} {{broken=[[1d6+2]]}}">
+          Выбывание</button>
       </div>
       <div class="char-feature char-feature_type_money">
-        <h2 class="char-feature">Административно-хозяйственная часть
-        </h2>
+        <label class="char-feature__title">АХЗ
+        </label>
         <div class="char-features__input-wrapper">
-          <label class="char-feature__label">Талоны</label>
-          <input type="number" class="char-feature__input">
-          <button type='roll'>Массовое</button>
-          <button type='roll'>Заказное</button>
-          <button type='roll'>Проблемное</button>
-        </div>
+          <label class="char-feature__label">
+            Талоны
+          </label>
+          <input type="number" class="char-feature__input" name="attr_tal">
+          </div>
+          <button type='roll' name="sheet-mass_order_roll" class="char-feature__button"
+            value="&{template:massorder} {{name=@{name}}} {{price=[[1d6*10]]}}">
+            Массовое</button>
+          <button type='roll' name="sheet-uniq_order_roll" class="char-feature__button"
+            value="&{template:uniqorder} {{name=@{name}}} {{price=[[3d6*10]]}} {{time=[[1d6]]}}">
+            Заказное</button>
+          <button type='roll' name="sheet-problem_order_roll" class="char-feature__button"
+            value="&{template:problemorder} {{name=@{name}}} {{price=[[6d6*10]]}} {{time=[[3d6]]}}">
+            Проблемное</button>
       </div>
     </div>
   </div>
@@ -194,6 +210,69 @@
 <rolltemplate class="sheet-rolltemplate-hplevel">
   <div>{{name}} получает {{result}} ПП.</div>
 </rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-defense">
+  <div>{{name}} {{naming_attr}}.</div>
+  <div>{{result}} vs {{check}}</div>
+  {{#rollWasCrit() result}}
+  <div>Критический провал: броня теряет 1 единицу прочности, урон удваивается!</div>
+  {{/rollWasCrit() result}}
+  {{#^rollWasCrit() result}}
+  {{#rollTotal() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollTotal() result check}}
+  {{#rollLess() result check}}
+  <div class="rollresult rollsuccess">УСПЕХ</div>
+  {{/rollLess() result check}}
+  {{#rollGreater() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollGreater() result check}}
+  {{/^rollWasCrit() result}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-death">
+  <div>{{name}} выбывает. Причина:</div>
+  {{#rollTotal() result 1}}
+  <div><b>Вырубился</b> — потеря сознания на {{unconscious}} часов.</div>
+  <div>Вернется в строй с {{alive}} ПП.</div>
+  {{/rollTotal() result 1}}
+  {{#rollTotal() result 2}}
+  <div><b>Контужен</b> — осложнения для всех проверок на {{shocked}} часов</div>
+  <div>Вернется в строй с {{alive}} ПП.</div>
+  {{/rollTotal() result 2}}
+  {{#rollTotal() result 3}}
+  <div><b>Помят</b> — сила, ловкость и выносливость понижены на 2 пункта до завтрашнего дня.</div>
+  <div>Вернется в строй с {{alive}} ПП.</div>
+  {{/rollTotal() result 3}}
+  {{#rollTotal() result 4}}
+  <div><b>Искалечен</b> — сила или ловкость (на выбор ведущей) уменьшаются на 2 пункта.</div>
+  <div>Вернется в строй с {{alive}} ПП.</div>
+  {{/rollTotal() result 4}}
+  {{#rollTotal() result 5}}
+  <div><b>Сломлен</b> — воля уменьшается на {{broken}} пунктов.</div>
+  <div>Вернется в строй с {{alive}} ПП.</div>
+  {{/rollTotal() result 5}}
+  {{#rollTotal() result 6}}
+  <div><b>Помер</b> — покинул мир живых.</div>
+  {{/rollTotal() result 6}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-massorder">
+  <div>Товар может быть куплен на месте в любое время за {{price}} талонов.</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-uniqorder">
+  <div>Товар приобретается за {{time}} дней, изготавливается в индивидуальном порядке и обходится в {{price}}
+      талонов.
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-problemorder">
+  <div>Товар можно получить за {{time}} дней, его стоимость составит {{price}} талонов, а обладание им может вызвать
+      вопросы у Администрации Бункера
+  </div>
+</rolltemplate>
+
 
 </body>
 </html>
