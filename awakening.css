@@ -122,16 +122,15 @@
 .info__selects:hover {
   background: #4d2c3155;
 }
-
 .info__selects:focus {
   background: #ffffff88;
 }
+
 .info__selects {
   border-radius:3px;
   width: 100%;
 }
-
-
+/*------------------------------*/
 .char-interface {
   width: 95%;
   margin: 0 auto;
@@ -197,7 +196,10 @@
 }
 
 .attribute__input:focus {
-  background-color:#ffffff88;
+  border-color: #bdbdbd;
+  box-shadow: 0 0 0 0.2rem #bebebe80;
+  background: #ffffff88;
+  outline: 0;
 }
 
 .attribute__button-wrapper {
@@ -279,6 +281,15 @@
   text-align: center;
   font-size: 24px;
   height: 50px;
+}
+.char-feature__input:hover {
+  background-color:#4d2c3155;
+}
+.char-feature__input:focus {
+  border-color: #bdbdbd;
+  box-shadow: 0 0 0 0.2rem #bebebe80;
+  background: #ffffff88;
+  outline: 0;
 }
 
 .char-feature__button {
