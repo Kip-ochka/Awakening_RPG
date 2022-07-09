@@ -13,27 +13,32 @@
   <div class="info">
     <div class="information">
       <div class="info__wrapper info__wrapper_name_fio">
-        <label class="info__label">ФИО
+        <label class="info__label">
+          ФИО
         </label>
         <input type="text" name="attr_name"  class="info__input info__input_type_information-fio"></input>
       </div>
       <div class="info__wrapper info__wrapper_name_level">
-        <label class="info__label">Уровень
+        <label class="info__label">
+          Уровень
         </label>
         <input type="number" name="attr_level" class="info__input info__input_type_information-numbers">
       </div>
       <div class="info__wrapper info__wrapper_name_age">
-        <label class="info__label">Возраст
+        <label class="info__label">
+          Возраст
         </label>
         <input type="number" name="attr_age" class="info__input info__input_type_information-numbers">
       </div>
       <div class="info__wrapper info__wrapper_name_background">
-        <label class="info__label" class="info__label ">Прошлое
+        <label class="info__label" class="info__label ">
+          Прошлое
         </label>
         <input type="text" name="attr_back" class="info__input info__input_type_information-background">
       </div>
       <div class="info__wrapper info__wrapper_name_rank">
-        <label class="info__label">Звание
+        <label class="info__label">
+          Звание
         </label>
         <select name="attr_rang" class="info__selects info__selects_type_rank">
           <option value="-1" selected="selected">Рядовой</option>
@@ -64,11 +69,13 @@
       </div>
     </div>
   </div>
+
   <div class="char-interface">
     <div class="attribute">
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str" 
-        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">Крепость
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
+        Крепость
         </button>
        <input type="number" name="attr_str" class="attribute__input">
        <div class="attribute__button-wrapper">
@@ -82,7 +89,8 @@
       </div>
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil" 
-        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">Ловкость
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
+        Ловкость
         </button>
         <input type="number" name="attr_dex" class="attribute__input">
         <div class="attribute__button-wrapper">
@@ -96,7 +104,8 @@
       </div>
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int" 
-        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">Интеллект
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">
+        Интеллект
         </button>
         <input type="number" name="attr_int" class="attribute__input">
         <div class="attribute__button-wrapper">
@@ -117,7 +126,7 @@
     <div class="char-features">
       <div class="char-feature char-feature_type_health">
         <label class="char-feature__title">
-          ПП
+          ПП.
         </label>
         <div class="char-features__input-wrapper">
           <label class="char-feature__label">
@@ -139,7 +148,8 @@
           Уровень</button>
       </div>
       <div class="char-feature char-feature_type_battle">
-        <label class="char-feature__title"">ТТХ
+        <label class="char-feature__title"">
+          ТТХ.
         </label>
         <button type='roll' class="char-feature__button" name='rank_init_roll'
           value="&{template:rankinit} {{name=@{name}}} {{result=[[1d6+@{rank}]]}}">
@@ -163,7 +173,7 @@
           Выбывание</button>
       </div>
       <div class="char-feature char-feature_type_money">
-        <label class="char-feature__title">АХЧ
+        <label class="char-feature__title">АХЧ.
         </label>
         <div class="char-features__input-wrapper">
           <label class="char-feature__label">
@@ -183,14 +193,53 @@
       </div>
     </div>
   </div>
+  <div class="oddities">
+    <div class="oddities__section oddities__section_type_psycho">
+      <label class="oddities__title">Ужас и психозы</label>
+        <div class="odities__control-wrapper">
+        <button type="roll" name="sheet-fear_roll" class="oddities__button" 
+        value="&{template:fear} {{name=@{name}}} {{fight=[[1d6]]}} {{out=[[1d6*10]]}}">
+        Ужас</button>
+        <button type="roll" name="sheet-psycho_roll" class="oddities__button" 
+        value="&{template:ps} {{name=@{name}}} {{result=[[1d6]]}}{{panic=[[1d4]]}}">
+        Психозы</button>
+      </div>
+      <textarea class="oddities__textarea"></textarea>
+    </div>
+
+    <div class="oddities__section oddities__section_type_mutation">
+      <label class="oddities__title">
+        Мутации
+      </label>
+      <div class="odities__control-wrapper">
+        <button type="roll" name="sheet-mut_roll" class="oddities__button" value="&{template:mut} {{name=@{name}}} {{result=[[1d12+@{mutrank}]]}} {{days=[[1d6+2]]}} {{armor=[[1d4]]}} {{hands=[[1d12+3]]}} {{inc=[[1d4+2]]}} {{weeks=[[1d2]]}} {{weeks-long=[[1d4]]}}">
+          Мутировать</button>
+          <label class="oddities__label">
+            МДФ
+          </label>
+          <select class="oddities__select" name="attr_mutrank">
+            <option value="0" selected="selected">0</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+          </select>
+      </div>
+      <textarea class="oddities__textarea"></textarea>
+    </div>
+
+  <footer class="test"></footer>
+</body>
 <rolltemplate class="sheet-rolltemplate-customcheck">
-  <div><span class="sheet-rolltemplate-customcheck__bold">{{name}}</span>проверяет {{naming_attr}}</div>
+  <div>{{name}}проверяет {{naming_attr}}</div>
   <div>{{result}} vs {{check}}</div>{{#rollTotal() result check}}
-  <div><span class="sheet-rolltemplate-customcheck__bold">ПРОВАЛ</span></div>
+  <div>ПРОВАЛ</div>
   {{/rollTotal() result check}} {{#rollLess() result check}}
-  <div><span class="sheet-rolltemplate-customcheck__bold">УСПЕХ</span></div>
+  <div>УСПЕХ</div>
   {{/rollLess() result check}} {{#rollGreater() result check}}
-  <div><span class="sheet-rolltemplate-customcheck__bold">ПРОВАЛ</span></div>
+  <div>ПРОВАЛ</div>
   {{/rollGreater() result check}}
 </rolltemplate>
 
@@ -273,6 +322,39 @@
   </div>
 </rolltemplate>
 
+<rolltemplate class="sheet-rolltemplate-fear">
+  <div>{{name}} впадает в ужас.</div>
+  <div>Его тело отказывается следовать приказам мозга {{fight}} раундов в бою или {{out}} минут вне боя</div>
+</rolltemplate>
 
-</body>
+<rolltemplate class="sheet-rolltemplate-ps">
+  {{#rollTotal() result 1}}
+  <div>{{name}} впадает в <b>паранойю</b> — персонаж не хочет оставаться один на один с кем-либо, всегда таскает с
+      собой готовое к бою оружие и не желает делиться ресурсами с окружающими.
+  </div>
+  {{/rollTotal() result 1}}
+  {{#rollTotal() result 2}}
+  <div>{{name}} испытывает <b>жор</b> — привычку к поеданию не вполне или вовсе не съедобных субстанций и предметов
+      (бычков от сигарет, тараканов, веточек, пороха, замазки и т.п.).
+  </div>
+  {{/rollTotal() result 2}}
+  {{#rollTotal() result 3}}
+  <div>{{name}} испытывает <b>панические атаки</b> — персонаж автоматически проваливает проверки(<b>{{panic}}</b>)
+      любых атрибутов (в бою или вне боя) каждые сутки.
+  </div>
+  {{/rollTotal() result 3}}
+  {{#rollTotal() result 4}}
+  <div>{{name}} видит <b>ночные кошмары</b> — персонажу требуется успешная проверка воли (или доза успокоительного),
+      чтобы отдохнуть за время ночного сна.
+  </div>
+  {{/rollTotal() result 4}}
+  {{#rollTotal() result 5}}
+  <div>{{name}} испытывает <b>галлюцинации</b> — персонаж видит и слышит куда больше, чем все остальные.</div>
+  {{/rollTotal() result 5}}
+  {{#rollTotal() result 6}}
+  <div>{{name}} полностью <b>отрешен</b> — чувства персонажа притуплены настолько, что он не замечает очевидных для
+      других вещей.
+  </div>
+  {{/rollTotal() result 6}}
+</rolltemplate>
 </html>
