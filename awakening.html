@@ -7,10 +7,13 @@
   <title>awakening</title>
 </head>
 <body class="main__wrapper">
+
   <div class="header">
     <img src="./images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
   </div>
+
   <div class="info">
+
     <div class="information">
       <div class="info__wrapper info__wrapper_name_fio">
         <label class="info__label">
@@ -68,9 +71,11 @@
         </select>
       </div>
     </div>
+
   </div>
 
   <div class="char-interface">
+    
     <div class="attribute">
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str" 
@@ -87,6 +92,7 @@
           -</button>
         </div>
       </div>
+      
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil" 
         value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
@@ -102,6 +108,7 @@
           -</button>
         </div> 
       </div>
+
       <div class="attribute__wrapper">
         <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int" 
         value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">
@@ -117,13 +124,16 @@
           -</button>
         </div>
       </div>
+
       <div class="attribute__wrapper">
         <button type='roll' name='init_attrs_roll' class="button button__attribute button__attribute_init-char"
                 value="&{template:init} {{name=@{name}}} {{str-init=[[3d6kl1+10]]}} {{dex-init=[[3d6kl1+10]]}} {{int-init=[[3d6kl1+10]]}} {{hp-init=[[1d8+2]]}} {{talon-init=[[2d6*10]]}}">
             Стартовые аттрибуты</button>
       </div>
     </div>
+
     <div class="char-features">
+
       <div class="char-feature char-feature_type_health">
         <label class="char-feature__title">
           ПП.
@@ -147,6 +157,7 @@
           value="&{template:hplevel} {{name=@{name}}} {{result=[[1d8]]}}">
           Уровень</button>
       </div>
+
       <div class="char-feature char-feature_type_battle">
         <label class="char-feature__title"">
           ТТХ.
@@ -175,6 +186,7 @@
       <div class="char-feature char-feature_type_money">
         <label class="char-feature__title">АХЧ.
         </label>
+
         <div class="char-features__input-wrapper">
           <label class="char-feature__label">
             Талоны
@@ -190,10 +202,12 @@
           <button type='roll' name="sheet-problem_order_roll" class="char-feature__button"
             value="&{template:problemorder} {{name=@{name}}} {{price=[[6d6*10]]}} {{time=[[3d6]]}}">
             Проблемное</button>
-      </div>
+        </div>
     </div>
   </div>
+
   <div class="oddities">
+
     <div class="oddities__section oddities__section_type_psycho">
       <label class="oddities__title">Ужас и психозы</label>
         <div class="odities__control-wrapper">
@@ -229,7 +243,55 @@
       </div>
       <textarea class="oddities__textarea"></textarea>
     </div>
+  </div>
+    <div class="inventory">
 
+      <div class="inventory__weapon">
+        <p class="inventory__title">ВООРУЖЕНИЕ</p>
+          <div class="inventory__columns-name">
+            <p class="inventory__name-item">Наименование</p>
+            <p class="inventory__name-item">Тип</p>
+            <p class="inventory__name-item">Урон</p>
+            <p class="inventory__name-item">Качества</p>
+          </div>
+          <fieldset class="repeating_inventory">
+            <input class="repeating_gearlist__input repeating_gearlist__input_type_name" type="text" name="attr_weapon">
+            <select class="repeating_inventory__select" name="attr_atcktype">
+                <option value="@{dex}" selected="selected">Стрлк.</option>
+                <option value="@{str}">Ркп.</option>
+            </select>
+            <div class="inventory__weapondice-wrapper">
+            <input class="repeating_gearlist__input repeating_inventory__input_weapondice" type="text" name="attr_weapondice">
+            <button type="roll" name="atck_roll" class="inventory__button"
+                    value="&{template:atck} {{name=@{name}}} {{weaponname=@{weapon}}}{{dmg=[[1d@{weapondice}]]}} {{check=[[@{atcktype}]]}} {{result=[[1d20]]}}">
+                <span style="font-family: 'Pictos Custom'">[</span></button>
+              </div>
+            <input class="repeating_gearlist__input repeating_inventory__input_type_quality" type="text" name="attr_weaponattrs">
+          </fieldset>
+      </div>
+
+      <div class="inventory__equipment">
+        <p class="inventory__title">ЭКИПИРОВКА</p>
+        <div class="inventory__columns-name inventory__columns-name_eqip">
+          <p class="inventory__name-item">Наименование</p>
+          <p class="inventory__name-item">Количество</p>
+          <p class="inventory__name-item">Качества</p>
+        </div>
+        <fieldset class="repeating_gearlist">
+          <input class="repeating_gearlist__input repeating_gearlist__input_type_name" type="text" name="attr_gear">
+          <input class="repeating_gearlist__input repeating_gearlist__number" type="number" name="attr_gearamount">
+          <input class="repeating_gearlist__input repeating_inventory__input_type_quality" type="text" name="attr_gearattrs">
+      </fieldset>
+      </div>
+
+      <div class="inventory__small-items">
+        <p class="inventory__title">МЕЛОЧЕВКА</p>
+      
+      <fieldset class="repeating_stuff">
+        <input type="text" class="repeating_gearlist__input" name="attr_stuff">
+      </fieldset>
+    </div>
+    </div>
   <footer class="test"></footer>
 </body>
 <rolltemplate class="sheet-rolltemplate-customcheck">
@@ -356,5 +418,31 @@
       других вещей.
   </div>
   {{/rollTotal() result 6}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-atck">
+  <div>{{name}} использует {{weaponname}} для атаки.</div>
+  <div>{{result}} vs {{check}}</div>
+  {{#rollWasCrit() result}}
+  <div>Оружие заклинило или теряет 1 единицу прочности!</div>
+  {{/rollWasCrit() result}}
+  {{#^rollWasCrit() result}}
+  {{#rollTotal() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollTotal() result check}}
+  {{#rollLess() result check}}
+  {{#rollWasFumble() result}}
+  <div class="rollresult rollsuccess">КРИТИЧЕСКИЙ УСПЕХ</div>
+  <div>Урон: <span class="sheet-no-border">{{dmg}}</span> x 2</div>
+  {{/rollWasFumble() result}}
+  {{#^rollWasFumble() result}}
+  <div class="rollresult rollsuccess">УСПЕХ</div>
+  <div>Урон: <span class="sheet-no-border">{{dmg}}</span></div>
+  {{/^rollWasFumble() result}}
+  {{/rollLess() result check}}
+  {{#rollGreater() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollGreater() result check}}
+  {{/^rollWasCrit() result}}
 </rolltemplate>
 </html>

@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .header {
@@ -85,14 +85,11 @@
   width: 100%;
   min-width: 50px;
   height: 100%;
-  text-align: center;
   font-size: 18px;
 }
-
 .info__input:hover {
   background: #4d2c3155;
 }
-
 .info__input:focus {
   border-color: #bdbdbd;
   box-shadow: 0 0 0 0.2rem #bebebe80;
@@ -419,11 +416,141 @@
   background:#fff;
 }
 
-.sheet-rolltemplate-customcheck, .sheet-rolltemplate-init , .sheet-rolltemplate-healing , .sheet-rolltemplate-hplevel , .sheet-rolltemplate-defense , .sheet-rolltemplate-death , .sheet-rolltemplate-massorder , .sheet-rolltemplate-uniqorder, .sheet-rolltemplate-problemorder , .sheet-rolltemplate-fear , .sheet-rolltemplate-ps{
-  display: none;
+.inventory {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius:3px;
+  margin-top: 20px;
 }
-.test {
-  height: 100px;
-  background-color:#000;
+.inventory__weapon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inventory__equipment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inventory__title {
   width: 100%;
+  font-family: 'Finlandica', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 10px 0 0 0;
+  margin: 0;
+  text-align: center;
+}
+
+.inventory__columns-name {
+  display: grid;
+  width: 95%;
+  grid-template-columns: 3fr .7fr .7fr 3fr;
+  gap:5px;
+  padding: 0 5px;
+}
+.inventory__columns-name_eqip{
+  grid-template-columns: 3fr 1fr 3fr;
+}
+
+.inventory__name-item{
+  font-family: 'Finlandica', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.repeating_inventory {
+  display: grid;
+  width: 95%;
+  grid-template-columns: 3fr .7fr .7fr 3fr;
+  margin: 0;
+  padding: 5px;
+  border:none;
+  gap:5px;
+  
+}
+.repeating_gearlist{
+  display: grid;
+  width: 95%;
+  grid-template-columns: 3fr 1fr 3fr;
+  margin: 0;
+  padding: 5px;
+  border: none;
+  gap:5px;
+}
+.repeating_stuff{
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto 20px auto;
+  padding: 5px;
+  border: none;
+}
+
+.repeating_gearlist__input {
+  font-family: 'Finlandica', sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #ffffff88;
+  text-align: left;
+  padding: 2px;
+  font-size: 18px;
+  height: 30px;
+  width: 100%;
+}
+.repeating_gearlist__input:hover {
+  background: #4d2c3155;
+}
+.repeating_gearlist__input:focus {
+  border-color: #bdbdbd;
+  box-shadow: 0 0 0 0.2rem #bebebe80;
+  background: #ffffff88;
+  outline: 0;
+}
+
+.repeating_inventory__select {
+  font-family: 'Finlandica', sans-serif;
+  background: #ffffff88;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: end;
+}
+.repeating_inventory__select:hover {
+  background: #4d2c3155;
+}
+.repeating_inventory__select:focus {
+  background: #ffffff88;
+}
+/* ---------------------------------------------- */
+.inventory__weapondice-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+.repeating_inventory__input_weapondice{
+  width: calc(100% - 33px);
+}
+.inventory__button{
+  font-family: 'Finlandica', sans-serif;
+  background: transparent;
+  border: 1px solid #bebebe;
+  border-radius: 3px;
+  cursor:pointer;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+/* ------------------------------------------------- */
+
+.sheet-rolltemplate-customcheck, .sheet-rolltemplate-init , .sheet-rolltemplate-healing , .sheet-rolltemplate-hplevel , .sheet-rolltemplate-defense , .sheet-rolltemplate-death , .sheet-rolltemplate-massorder , .sheet-rolltemplate-uniqorder, .sheet-rolltemplate-problemorder , .sheet-rolltemplate-fear , .sheet-rolltemplate-ps , .sheet-rolltemplate-atck{
+  display: none;
 }
