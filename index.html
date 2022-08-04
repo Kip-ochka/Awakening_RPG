@@ -8,33 +8,33 @@
   
       <div class="information">
         <div class="info__wrapper info__wrapper_name_fio">
-          <label class="info__label">
+          <p class="info__label">
             ФИО
-          </label>
+          </p>
           <input type="text" name="attr_name"  class="info__input info__input_type_information-fio"></input>
         </div>
         <div class="info__wrapper info__wrapper_name_level">
-          <label class="info__label">
+          <p class="info__label">
             Уровень
-          </label>
+          </p>
           <input type="number" name="attr_level" class="info__input info__input_type_information-numbers">
         </div>
         <div class="info__wrapper info__wrapper_name_age">
-          <label class="info__label">
+          <p class="info__label">
             Возраст
-          </label>
+          </p>
           <input type="number" name="attr_age" class="info__input info__input_type_information-numbers">
         </div>
         <div class="info__wrapper info__wrapper_name_background">
-          <label class="info__label" class="info__label ">
+          <p class="info__label" class="info__label ">
             Прошлое
-          </label>
+          </p>
           <input type="text" name="attr_back" class="info__input info__input_type_information-background">
         </div>
         <div class="info__wrapper info__wrapper_name_rank">
-          <label class="info__label">
+          <p class="info__label">
             Звание
-          </label>
+          </p>
           <select name="attr_rang" class="info__selects info__selects_type_rank">
             <option value="-1" selected="selected">Рядовой</option>
             <option value="0">Командир группы</option>
@@ -44,8 +44,8 @@
           </select>
         </div>
         <div class="info__wrapper info__wrapper_name_rank">
-          <label class="info__label">Соц.группа
-          </label>
+          <p class="info__label">Соц.группа
+          </p>
           <select name="attr_grup" class="info__selects info__selects_type_grup">
             <option value="0">Без группы</option>
             <option value="1">Механик-водитель</option>
@@ -129,19 +129,19 @@
       <div class="char-features">
   
         <div class="char-feature char-feature_type_health">
-          <label class="char-feature__title">
+          <p class="char-feature__title">
             ПП.
-          </label>
+          </p>
           <div class="char-features__input-wrapper">
-            <label class="char-feature__label">
+            <p class="char-feature__label">
               Текущие
-            </label>
+            </p>
             <input type="number" class="char-feature__input" name="attr_chp">
           </div>
           <div class="char-features__input-wrapper">
-            <label class="char-feature__label">
+            <p class="char-feature__label">
               Максимум
-            </label>
+            </p>
             <input type="number" class="char-feature__input" name="attr_mhp">
           </div>
           <button type='roll' class="char-feature__button" name='healing_roll'
@@ -153,16 +153,16 @@
         </div>
   
         <div class="char-feature char-feature_type_battle">
-          <label class="char-feature__title">
+          <p class="char-feature__title">
             ТТХ.
-          </label>
+          </p>
           <button type='roll' class="char-feature__button" name='rank_init_roll'
             value="&{template:rankinit} {{name=@{name}}} {{result=[[1d6+@{rank}]]}}">
             Инициатива</button>
           <div class="char-features__input-wrapper">
-            <label class="char-feature__label">
+            <p class="char-feature__label">
               Защита
-            </label>
+            </p>
             <input type="number" class="char-feature__input"  name="attr_ac">
           </div>
           <div class="char-feature__button-wrapper">
@@ -178,13 +178,13 @@
             Выбывание</button>
         </div>
         <div class="char-feature char-feature_type_money">
-          <label class="char-feature__title">АХЧ.
-          </label>
+          <p class="char-feature__title">АХЧ.
+          </p>
   
           <div class="char-features__input-wrapper">
-            <label class="char-feature__label">
+            <p class="char-feature__label">
               Талоны
-            </label>
+            </p>
             <input type="number" class="char-feature__input" name="attr_tal">
             </div>
             <button type='roll' name="sheet-mass_order_roll" class="char-feature__button"
@@ -217,15 +217,15 @@
       </div>
   
       <div class="oddities__section oddities__section_type_mutation">
-        <label class="oddities__title">
+        <p class="oddities__title">
           Мутации
-        </label>
+        </p>
         <div class="odities__control-wrapper">
           <button type="roll" name="sheet-mut_roll" class="oddities__button" value="&{template:mut} {{name=@{name}}} {{result=[[1d12+@{mutrank}]]}} {{days=[[1d6+2]]}} {{armor=[[1d4]]}} {{hands=[[1d12+3]]}} {{inc=[[1d4+2]]}} {{weeks=[[1d2]]}} {{weeks-long=[[1d4]]}}">
             Мутировать</button>
-            <label class="oddities__label">
+            <p class="oddities__label">
               МДФ
-            </label>
+            </p>
             <select class="oddities__select" name="attr_mutrank">
               <option value="0" selected="selected">0</option>
               <option value="2">2</option>
