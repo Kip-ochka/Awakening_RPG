@@ -238,7 +238,8 @@
       <textarea class="oddities__textarea"></textarea>
     </div>
   </div>
-    <div class="inventory">
+
+  <div class="inventory">
 
       <div class="inventory__weapon">
         <p class="inventory__title">ВООРУЖЕНИЕ</p>
@@ -285,28 +286,17 @@
         <input type="text" class="repeating_gearlist__input" name="attr_stuff">
       </fieldset>
     </div>
-<<<<<<< HEAD:awakening.html
   </div>
 </div>
 
-<rolltemplate class="sheet-rolltemplate-customcheck">
-=======
-    </div>
-  <footer class="footer"></footer>
-</body>
-<!-- <rolltemplate class="sheet-rolltemplate-customcheck">
->>>>>>> 09277a0adb613dc027a5ef62de015f5cc5992eae:index.html
-  <div>{{name}}проверяет {{naming_attr}}</div>
-  <div>{{result}} vs {{check}}</div>{{#rollTotal() result check}}
-  <div>ПРОВАЛ</div>
-  {{/rollTotal() result check}} {{#rollLess() result check}}
-  <div>УСПЕХ</div>
-  {{/rollLess() result check}} {{#rollGreater() result check}}
-  <div>ПРОВАЛ</div>
-  {{/rollGreater() result check}}
+<rolltemplate class="sheet-rolltemplate-init">
+  <div>{{name}} определяет стартовые аттрибуты:</div>
+  <div>Крепость: {{str-init}}</div>
+  <div>Ловкость: {{dex-init}}</div>
+  <div>Интеллект: {{int-init}}</div>
+  <div>Пункты прочности: {{hp-init}}</div>
+  <div>Талоны: {{talon-init}}</div>
 </rolltemplate>
-
-
 
 <rolltemplate class="sheet-rolltemplate-massorder">
   <div>Товар может быть куплен на месте в любое время за {{price}} талонов.</div>
@@ -395,15 +385,6 @@
   {{#rollTotal() result 6}}
   <div><b>Помер</b> — покинул мир живых.</div>
   {{/rollTotal() result 6}}
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-init">
-  <div>{{name}} определяет стартовые аттрибуты:</div>
-  <div>Крепость: {{str-init}}</div>
-  <div>Ловкость: {{dex-init}}</div>
-  <div>Интеллект: {{int-init}}</div>
-  <div>Пункты прочности: {{hp-init}}</div>
-  <div>Талоны: {{talon-init}}</div>
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-customcheck">
@@ -531,8 +512,3 @@
   <div>Но не испытывает никаких явных мутаций.</div>
   {{/rollGreater() result 12}}
 </rolltemplate>
-<<<<<<< HEAD:awakening.html
- 
-=======
-</html> -->
->>>>>>> 09277a0adb613dc027a5ef62de015f5cc5992eae:index.html
