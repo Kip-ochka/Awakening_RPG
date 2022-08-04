@@ -1,4 +1,14 @@
-<div class="main__wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main__wrapper">
 
     <div class="header">
       <img src="https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
@@ -204,7 +214,7 @@
     <div class="oddities">
   
       <div class="oddities__section oddities__section_type_psycho">
-        <summary class="oddities__title">Ужас и психозы</summary>
+        <p class="oddities__title">Ужас и психозы</p>
           <div class="odities__control-wrapper">
           <button type="roll" name="sheet-fear_roll" class="oddities__button" 
           value="&{template:fear} {{name=@{name}}} {{fight=[[1d6]]}} {{out=[[1d6*10]]}}">
@@ -290,8 +300,13 @@
           <input type="text" class="repeating_gearlist__input" name="attr_stuff">
         </fieldset>
       </div>
+
     </div>
+
 </div>
+</body>
+</html>
+
 
 <rolltemplate class="sheet-rolltemplate-init">
   <div>{{name}} определяет стартовые аттрибуты:</div>
