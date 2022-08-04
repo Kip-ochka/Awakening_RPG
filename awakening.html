@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./awakening.css">
-  <title>awakening</title>
-</head>
-<body class="main__wrapper">
+<div class="main__wrapper">
 
   <div class="header">
-    <img src="./images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
+    <img src="url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_banner.png)" alt="Лого Пробуждения" class="header__image">
   </div>
 
   <div class="info">
@@ -78,6 +70,7 @@
     
     <div class="attribute">
       <div class="attribute__wrapper">
+        <div class="background"></div>
         <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str" 
         value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
         Крепость
@@ -86,10 +79,10 @@
        <div class="attribute__button-wrapper">
           <button type='roll' name='attr_rollstradv' class="button button__advantage" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}">
-          +</button>
+          + </button>
           <button type='roll' name='attr_rollstrdis' class="button button__disadvantage "
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}">
-          -</button>
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}">
+          - </button>
         </div>
       </div>
       
@@ -101,11 +94,11 @@
         <input type="number" name="attr_dex" class="attribute__input">
         <div class="attribute__button-wrapper">
         <button type='roll' name='attr_rolldexadv' class="button button__advantage"
-          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}">
-          +</button>
+        value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}">
+          + </button>
           <button type='roll' name='attr_rollstrdis' class="button button__disadvantage"
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}">
-          -</button>
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}">
+          - </button>
         </div> 
       </div>
 
@@ -118,10 +111,10 @@
         <div class="attribute__button-wrapper">
           <button type='roll' name='attr_rollintadv' class="button button__advantage"
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}">
-          +</button>
+          + </button>
           <button type='roll' name='attr_rollintdis' class="button button__disadvantage"
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}">
-          -</button>
+          - </button>
         </div>
       </div>
 
@@ -209,7 +202,7 @@
   <div class="oddities">
 
     <div class="oddities__section oddities__section_type_psycho">
-      <label class="oddities__title">Ужас и психозы</label>
+      <summary class="oddities__title">Ужас и психозы</summary>
         <div class="odities__control-wrapper">
         <button type="roll" name="sheet-fear_roll" class="oddities__button" 
         value="&{template:fear} {{name=@{name}}} {{fight=[[1d6]]}} {{out=[[1d6*10]]}}">
@@ -291,9 +284,9 @@
         <input type="text" class="repeating_gearlist__input" name="attr_stuff">
       </fieldset>
     </div>
-    </div>
-  <footer class="test"></footer>
-</body>
+  </div>
+</div>
+
 <rolltemplate class="sheet-rolltemplate-customcheck">
   <div>{{name}}проверяет {{naming_attr}}</div>
   <div>{{result}} vs {{check}}</div>{{#rollTotal() result check}}
@@ -305,21 +298,49 @@
   {{/rollGreater() result check}}
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-init">
-  <div>{{name}} определяет стартовые аттрибуты:</div>
-  <div>Крепость: {{str-init}}</div>
-  <div>Ловкость: {{dex-init}}</div>
-  <div>Интеллект: {{int-init}}</div>
-  <div>Пункты прочности: {{hp-init}}</div>
-  <div>Талоны: {{talon-init}}</div>
+
+
+<rolltemplate class="sheet-rolltemplate-massorder">
+  <div>Товар может быть куплен на месте в любое время за {{price}} талонов.</div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-uniqorder">
+  <div>Товар приобретается за {{time}} дней, изготавливается в индивидуальном порядке и обходится в {{price}}
+      талонов.
+  </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-problemorder">
+  <div>Товар можно получить за {{time}} дней, его стоимость составит {{price}} талонов, а обладание им может вызвать
+      вопросы у Администрации Бункера
+  </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-talinit">
+  <div>{{name}} начинает игру с талонами в количестве {{result}} штук.</div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-healing">
-  <div>{{name}} восстаналивает {{result}} ПП.</div>
-</rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-hplevel">
-  <div>{{name}} получает {{result}} ПП.</div>
+<rolltemplate class="sheet-rolltemplate-atck">
+  <div>{{name}} использует {{weaponname}} для атаки.</div>
+  <div>{{result}} vs {{check}}</div>
+  {{#rollWasCrit() result}}
+  <div>Оружие заклинило или теряет 1 единицу прочности!</div>
+  {{/rollWasCrit() result}}
+  {{#^rollWasCrit() result}}
+  {{#rollTotal() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollTotal() result check}}
+  {{#rollLess() result check}}
+  {{#rollWasFumble() result}}
+  <div class="rollresult rollsuccess">КРИТИЧЕСКИЙ УСПЕХ</div>
+  <div>Урон: <span class="sheet-no-border">{{dmg}}</span> x 2</div>
+  {{/rollWasFumble() result}}
+  {{#^rollWasFumble() result}}
+  <div class="rollresult rollsuccess">УСПЕХ</div>
+  <div>Урон: <span class="sheet-no-border">{{dmg}}</span></div>
+  {{/^rollWasFumble() result}}
+  {{/rollLess() result check}}
+  {{#rollGreater() result check}}
+  <div class="rollresult rollfail">ПРОВАЛ</div>
+  {{/rollGreater() result check}}
+  {{/^rollWasCrit() result}}
 </rolltemplate>
 
 <rolltemplate class="sheet-rolltemplate-defense">
@@ -368,22 +389,45 @@
   {{/rollTotal() result 6}}
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-massorder">
-  <div>Товар может быть куплен на месте в любое время за {{price}} талонов.</div>
+<rolltemplate class="sheet-rolltemplate-init">
+  <div>{{name}} определяет стартовые аттрибуты:</div>
+  <div>Крепость: {{str-init}}</div>
+  <div>Ловкость: {{dex-init}}</div>
+  <div>Интеллект: {{int-init}}</div>
+  <div>Пункты прочности: {{hp-init}}</div>
+  <div>Талоны: {{talon-init}}</div>
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-uniqorder">
-  <div>Товар приобретается за {{time}} дней, изготавливается в индивидуальном порядке и обходится в {{price}}
-      талонов.
-  </div>
+<rolltemplate class="sheet-rolltemplate-customcheck">
+  <div>{{name}} проверяет {{naming_attr}}</div>
+  <div>{{result}} vs {{check}}</div>
+  {{#rollTotal() result check}}
+  <div>ПРОВАЛ</div>
+  {{/rollTotal() result check}}
+  {{#rollLess() result check}}
+  <div>УСПЕХ</div>
+  {{/rollLess() result check}}
+  {{#rollGreater() result check}}
+  <div>ПРОВАЛ</div>
+  {{/rollGreater() result check}}
 </rolltemplate>
-
-<rolltemplate class="sheet-rolltemplate-problemorder">
-  <div>Товар можно получить за {{time}} дней, его стоимость составит {{price}} талонов, а обладание им может вызвать
-      вопросы у Администрации Бункера
-  </div>
+<rolltemplate class="sheet-rolltemplate-healing">
+  <div>{{name}} восстаналивает {{result}} ПП.</div>
 </rolltemplate>
-
+<rolltemplate class="sheet-rolltemplate-hplevel">
+  <div>{{name}} получает {{result}} ПП.</div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-inithp">
+  <div>{{name}} получает {{result}} максимальных ПП.</div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-rankinit">
+  {{#rollGreater() result 3}}
+  <div>Группа, которой командует {{name}} действует <b>первой</b>.</div>
+  {{/rollGreater() result 3}}
+  {{#rollLess() result 4}}
+  <div>Группа, которой командует {{name}} действует <b>второй</b>.</div>
+  {{/rollLess() result 4}}
+</rolltemplate>
 <rolltemplate class="sheet-rolltemplate-fear">
   <div>{{name}} впадает в ужас.</div>
   <div>Его тело отказывается следовать приказам мозга {{fight}} раундов в бою или {{out}} минут вне боя</div>
@@ -420,29 +464,63 @@
   {{/rollTotal() result 6}}
 </rolltemplate>
 
-<rolltemplate class="sheet-rolltemplate-atck">
-  <div>{{name}} использует {{weaponname}} для атаки.</div>
-  <div>{{result}} vs {{check}}</div>
-  {{#rollWasCrit() result}}
-  <div>Оружие заклинило или теряет 1 единицу прочности!</div>
-  {{/rollWasCrit() result}}
-  {{#^rollWasCrit() result}}
-  {{#rollTotal() result check}}
-  <div class="rollresult rollfail">ПРОВАЛ</div>
-  {{/rollTotal() result check}}
-  {{#rollLess() result check}}
-  {{#rollWasFumble() result}}
-  <div class="rollresult rollsuccess">КРИТИЧЕСКИЙ УСПЕХ</div>
-  <div>Урон: <span class="sheet-no-border">{{dmg}}</span> x 2</div>
-  {{/rollWasFumble() result}}
-  {{#^rollWasFumble() result}}
-  <div class="rollresult rollsuccess">УСПЕХ</div>
-  <div>Урон: <span class="sheet-no-border">{{dmg}}</span></div>
-  {{/^rollWasFumble() result}}
-  {{/rollLess() result check}}
-  {{#rollGreater() result check}}
-  <div class="rollresult rollfail">ПРОВАЛ</div>
-  {{/rollGreater() result check}}
-  {{/^rollWasCrit() result}}
+<rolltemplate class="sheet-rolltemplate-mut">
+  <div>{{name}} чувствует, как что-то происходит с его организмом.</div>
+  <div>{{result}}</div>
+  {{#rollLess() result 5}}
+  <div>Но не испытывает никаких явных мутаций.</div>
+  {{/rollLess() result 5}}
+  {{#rollBetween() result 5 12}}
+  <div>Новая мутация:</div>
+  {{/rollBetween() result 5 12}}
+  {{#rollTotal() result 5}}
+  <div><b>Канал связи</b> — возможность при помощи собственного мозга и особых выростов затылочной кости принимать и
+      получать радиосигналы, чревата головными болями, через {{days}} суток.
+  </div>
+  {{/rollTotal() result 5}}
+  {{#rollTotal() result 6}}
+  <div><b>Жилец</b> — болезненное шевелящееся образование в животе, позволяющее без последствий употреблять заражённые
+      пищу и воду, но делающее не заражённую пищу бесполезной, через {{days}} суток.
+  </div>
+  {{/rollTotal() result 6}}
+  {{#rollTotal() result 7}}
+  <div><b>Струпья</b> — новая «шкура» из ороговевших пластин хитиноподобного материала, {{armor}} пунктов естественной
+      брони,
+      через {{days}} суток
+  </div>
+  {{/rollTotal() result 7}}
+  {{#rollTotal() result 8}}
+  <div><b>Хлысты</b> — отмирание рук, {{hands}} длинных, сильных и функциональных щупалец вместо верхних конечностей,
+      через {{days}} суток.
+  </div>
+  {{/rollTotal() result 8}}
+  {{#rollTotal() result 9}}
+  <div><b>Человек-битюг</b> — увеличение выносливости и силы на {{inc}} пунктов в неделю вплоть до макcимальных 20,
+      двойной расход еды и воды, двойная скорость самостоятельного излечения, тройной запас пунктов прочности,
+      проверки выносливости с преимуществом, чудовищная гипертрофия мышц и костей, через {{weeks}} недели
+  </div>
+  {{/rollTotal() result 9}}
+  {{#rollTotal() result 10}}
+  <div><b>Тараканья чуйка</b> — автоматический успех на проверках чутья и явные инсектоидные черты внешности, через
+      {{weeks}} недели.
+  </div>
+  {{/rollTotal() result 10}}
+  {{#rollTotal() result 11}}
+  <div><b>Муть</b> — высокочастотные колебания всего тела, размытость («замыленность») контура, постоянные осложнения
+      на проверках чутья, 50% вероятности неудачи для любого физического контакта (включая атаки), возможность
+      целенаправлено проходить через тонкие перегородки и двери при провале проверки выносливости, через {{days}}
+      суток.
+  </div>
+  {{/rollTotal() result 11}}
+  {{#rollTotal() result 12}}
+  <div><b>Мозгоед</b> — поедание свежего человеческого мозга позволяет получить воспоминания его бывшего носителя,
+      двойной размер черепной коробки и мозга через {{weeks-long}} недели, способности к теле-, пиро- и крио-кинезу
+      средних
+      масштабов, требующие проверок интеллекта и каждый раз наносящие d6 урона самому персонажу.
+  </div>
+  {{/rollTotal() result 12}}
+  {{#rollGreater() result 12}}
+  <div>Но не испытывает никаких явных мутаций.</div>
+  {{/rollGreater() result 12}}
 </rolltemplate>
-</html>
+ 

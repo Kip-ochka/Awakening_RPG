@@ -2,7 +2,7 @@
 
 .main__wrapper {
   font-family: 'Finlandica', sans-serif;
-  background-image: url(./images/awakening_top_background.png), url(./images/awakening_bottom_background.jpg);
+  background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_top_background.png), url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
   background-repeat: no-repeat, repeat;
   background-position: center, left top;
   background-size: 40%, auto;
@@ -11,6 +11,18 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0 auto 20px;
+}
+
+.background {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  z-index: -1;
+  opacity: .4;
 }
 
 .header {
@@ -69,7 +81,7 @@
 
 .info__label {
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
 }
 
@@ -132,15 +144,18 @@
 .attribute {
   display: grid;
   max-width:100%;
-  margin: 0;
-  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+  padding: 0;
   gap: 10px;
+  
 }
 
 .attribute__wrapper{
   display: flex;
   max-width: 100%;
   gap:1px;
+  position: relative;
+  z-index: 1;
 }
 
 .button {
@@ -199,13 +214,13 @@
 .button__advantage {
   height: 50%;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
   font-family: 'Finlandica', sans-serif;
 }
 .button__disadvantage {
   height: 50%;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
   font-family: 'Finlandica', sans-serif;
 }
 .button__attribute_init-char {
@@ -232,7 +247,7 @@
 
 .char-feature__title{
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
   text-align: center;
   min-height: 54px;
@@ -244,7 +259,7 @@
 
 .char-feature__label {
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
 }
 
@@ -335,7 +350,7 @@
 
 .oddities__title{
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
   width: 95%;
   margin: 0 auto;
@@ -371,7 +386,7 @@
 }
 .oddities__label {
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -440,7 +455,7 @@
 .inventory__title {
   width: 100%;
   font-family: 'Finlandica', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
   padding: 10px 0 0 0;
   margin: 0;
@@ -522,7 +537,7 @@
   border: 1px solid #ccc;
   cursor: pointer;
   font-size: 20px;
-  text-align: end;
+  text-align: start;
 }
 .repeating_inventory__select:hover {
   background: #4d2c3155;
@@ -551,6 +566,97 @@
 }
 /* ------------------------------------------------- */
 
-.sheet-rolltemplate-customcheck, .sheet-rolltemplate-init , .sheet-rolltemplate-healing , .sheet-rolltemplate-hplevel , .sheet-rolltemplate-defense , .sheet-rolltemplate-death , .sheet-rolltemplate-massorder , .sheet-rolltemplate-uniqorder, .sheet-rolltemplate-problemorder , .sheet-rolltemplate-fear , .sheet-rolltemplate-ps , .sheet-rolltemplate-atck{
-  display: none;
+.sheet-rolltemplate-customcheck,
+.sheet-rolltemplate-init,
+.sheet-rolltemplate-healing,
+.sheet-rolltemplate-hplevel,
+.sheet-rolltemplate-defense,
+.sheet-rolltemplate-death,
+.sheet-rolltemplate-massorder,
+.sheet-rolltemplate-uniqorder,
+.sheet-rolltemplate-problemorder,
+.sheet-rolltemplate-fear,
+.sheet-rolltemplate-ps,
+.sheet-rolltemplate-atck
+{
+  background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
+}
+
+.sheet-rolltemplate-atck,
+.sheet-rolltemplate-defense,
+.sheet-rolltemplate-customcheck 
+{
+  background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
+  text-align: center;
+}
+
+.sheet-rolltemplate-atck .inlinerollresult.fullfail,
+.sheet-rolltemplate-defense .inlinerollresult.fullfail {
+    border: green 2px solid;
+}
+
+.sheet-rolltemplate-atck .inlinerollresult.fullcrit,
+.sheet-rolltemplate-defense .inlinerollresult.fullcrit {
+    border: red 2px solid;
+}
+
+.sheet-rolltemplate-mut .inlinerollresult,
+.sheet-rolltemplate-mut .inlinerollresult.fullfail,
+.sheet-rolltemplate-mut .inlinerollresult.fullcrit,
+.sheet-rolltemplate-mut .inlinerollresult.importantroll,
+.sheet-rolltemplate-ps .inlinerollresult,
+.sheet-rolltemplate-ps .inlinerollresult.fullfail,
+.sheet-rolltemplate-ps .inlinerollresult.fullcrit,
+.sheet-rolltemplate-ps .inlinerollresult.importantroll,
+.sheet-rolltemplate-fear .inlinerollresult,
+.sheet-rolltemplate-fear .inlinerollresult.fullfail,
+.sheet-rolltemplate-fear .inlinerollresult.fullcrit,
+.sheet-rolltemplate-fear .inlinerollresult.importantroll,
+.sheet-rolltemplate-problemorder .inlinerollresult,
+.sheet-rolltemplate-problemorder .inlinerollresult.fullfail,
+.sheet-rolltemplate-problemorder .inlinerollresult.fullcrit,
+.sheet-rolltemplate-problemorder .inlinerollresult.importantroll,
+.sheet-rolltemplate-massorder .inlinerollresult,
+.sheet-rolltemplate-massorder .inlinerollresult.fullfail,
+.sheet-rolltemplate-massorder .inlinerollresult.fullcrit,
+.sheet-rolltemplate-massorder .inlinerollresult.importantroll,
+.sheet-rolltemplate-uniqorder .inlinerollresult,
+.sheet-rolltemplate-uniqorder .inlinerollresult.fullfail,
+.sheet-rolltemplate-uniqorder .inlinerollresult.fullcrit,
+.sheet-rolltemplate-uniqorder .inlinerollresult.importantroll,
+.sheet-rolltemplate-talinit .inlinerollresult,
+.sheet-rolltemplate-talinit .inlinerollresult.fullfail,
+.sheet-rolltemplate-talinit .inlinerollresult.fullcrit,
+.sheet-rolltemplate-talinit .inlinerollresult.importantroll,
+.sheet-rolltemplate-death .inlinerollresult,
+.sheet-rolltemplate-death .inlinerollresult.fullfail,
+.sheet-rolltemplate-death .inlinerollresult.fullcrit,
+.sheet-rolltemplate-death .inlinerollresult.importantroll,
+.sheet-rolltemplate-rankinit .inlinerollresult,
+.sheet-rolltemplate-rankinit .inlinerollresult.fullfail,
+.sheet-rolltemplate-rankinit .inlinerollresult.fullcrit,
+.sheet-rolltemplate-rankinit .inlinerollresult.importantroll,
+.sheet-rolltemplate-inithp .inlinerollresult,
+.sheet-rolltemplate-inithp .inlinerollresult.fullfail,
+.sheet-rolltemplate-inithp .inlinerollresult.fullcrit,
+.sheet-rolltemplate-inithp .inlinerollresult.importantroll,
+.sheet-rolltemplate-hplevel .inlinerollresult,
+.sheet-rolltemplate-hplevel .inlinerollresult.fullfail,
+.sheet-rolltemplate-hplevel .inlinerollresult.fullcrit,
+.sheet-rolltemplate-hplevel .inlinerollresult.importantroll,
+.sheet-rolltemplate-healing .inlinerollresult,
+.sheet-rolltemplate-healing .inlinerollresult.fullfail,
+.sheet-rolltemplate-healing .inlinerollresult.fullcrit,
+.sheet-rolltemplate-healing .inlinerollresult.importantroll,
+.sheet-rolltemplate-init .inlinerollresult,
+.sheet-rolltemplate-init .inlinerollresult.fullfail,
+.sheet-rolltemplate-init .inlinerollresult.fullcrit,
+.sheet-rolltemplate-init .inlinerollresult.importantroll,
+.sheet-rolltemplate-customcheck .inlinerollresult,
+.sheet-rolltemplate-customcheck .inlinerollresult.fullfail,
+.sheet-rolltemplate-customcheck .inlinerollresult.fullcrit,
+.sheet-rolltemplate-customcheck .inlinerollresult.importantroll {
+    background-color: transparent;
+    border: none;
+    color: black;
 }
