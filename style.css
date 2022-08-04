@@ -51,21 +51,27 @@
 
 .info__wrapper_name_fio {
   width: 950px;
+  height: 35px;
 }
 .info__wrapper_name_level {
  width: 160px;
+ height: 35px;
 }
 .info__wrapper_name_age {
   width: 160px;
+  height: 35px;
 }
 .info__wrapper_name_background {
   width: 610px;
+  height: 35px;
 }
 .info__wrapper_name_rank {
   width: 470px;
+  height: 35px;
 }
 .info__wrapper_name_grup {
   width: 470px;
+  height: 35px;
 }
 
 .info__label {
@@ -123,7 +129,7 @@
 }
 /*------------------------------*/
 .char-interface {
-  width: 95%;
+  width: 950px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 350px;
@@ -134,7 +140,7 @@
 /* тут меняется линия на грид */
 .attribute {
   display: grid;
-  max-width:100%;
+  width: 950px;
   margin: 20px 0 0 0;
   padding: 0;
   gap: 10px;
@@ -143,11 +149,14 @@
 
 .attribute__wrapper{
   display: flex;
-  max-width: 100%;
+  width: 280px;
+  height: 80px;
   gap:1px;
   background-color:#ffffff50;
 }
-
+.attribute__wrapper_small{
+  height: 50px;
+}
 .button {
   font-family: 'Finlandica', sans-serif;
   background: transparent;
@@ -158,17 +167,16 @@
 .button:hover {
   background-color:#4d2c3155;
 }
-.button::before {
-  content: ' ';
+.btn::before {
+  content: '';
 }
-.button::after {
-  content: ' ';
+.btn::after {
+  content: '';
 }
 
 .button__attribute {
   font-size: 24px;
-  width: 135px;
-  min-width: 145px;
+  width: 150px;
   font-family: 'Finlandica', sans-serif;
 }
 
@@ -201,24 +209,26 @@
 .attribute__button-wrapper {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 67px;
   gap:1px;
 }
 .button__advantage {
   height: 50%;
+  width: 59px;
   font-size: 24px;
   font-weight: 400;
   font-family: 'Finlandica', sans-serif;
 }
 .button__disadvantage {
   height: 50%;
-  width: 51px;
+  width: 59px;
   font-size: 24px;
   font-weight: 400;
   font-family: 'Finlandica', sans-serif;
 }
 .button__attribute_init-char {
   width: 100%;
+  height: 50px;
 }
 
 .char-features {
@@ -232,13 +242,14 @@
 
 .char-feature {
   display: flex;
+  width: 208px;
   align-items:center;
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius:3px;
   gap:9px 0;
   padding-bottom: 3px;
-  max-height: 350px;
+  height: 328px;
   background-color:#ffffff50;
 }
 
@@ -265,7 +276,6 @@
 .char-features__input-wrapper {
   display: grid;
   align-items:center;
-  width: 95%;
   grid-template-columns: 116px auto;
   gap: 0 5px;
   min-height: 40px;
@@ -279,7 +289,7 @@
   border-radius: 3px;
   background: #ffffff88;
   text-align: left;
-  min-width: 50px;
+  width: 76px;
   text-align: center;
   font-size: 24px;
   height: 50px;
@@ -300,18 +310,18 @@
   background-color: transparent;
   border-radius: 3px;
   cursor: pointer;
-  width: 187px;
+  width: 197px;
   font-size: 24px;
-  min-height:50px;
+  height:50px;
   border: 1px solid #ccc;
 }
 .char-feature__button:hover {
   background-color:#4d2c3155;
 }
-.char-feature__button::before {
-  content: ' ';
-}
 
+.button__attribute_init-char{
+  width: 279px;
+}
 .char-feature__button-wrapper{
   display: flex;
   width: 95%;
@@ -322,7 +332,7 @@
 .char-feature__button_half {
   padding: 0 1px 0;
   width: 100px;
-  height: 100%;
+
 }
 
 .oddities {
@@ -374,9 +384,9 @@
   border: 1px solid #bebebe;
   border-radius: 3px;
   cursor: pointer;
-  width: 30%;
+  width: 135px;
   font-size: 24px;
-  min-height:50px;
+  height:50px;
 }
 .oddities__button:hover {
   background-color:#4d2c3155;
@@ -398,10 +408,11 @@
   border-radius: 3px;
   background: #ffffff88;
   text-align: left;
-  min-width: 50px;
   text-align: center;
   font-size: 24px;
   height: 50px;
+  width: 56px;
+
 }
 .oddities__select:hover {
   background: #4d2c3155;
@@ -411,7 +422,7 @@
 }
 
 .oddities__textarea {
-  width: 95%;
+  width: 442px;
   height: 90px;
   margin: 0 auto 10px;
   padding: 0;
@@ -434,7 +445,7 @@
 .inventory {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 950px;
   margin: 0 auto;
   justify-content: center;
   border: 1px solid #ccc;
@@ -454,7 +465,7 @@
 }
 
 .inventory__title {
-  width: 100%;
+  width: 950px;
   font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -464,14 +475,11 @@
 }
 
 .inventory__columns-name {
-  display: grid;
-  width: 95%;
-  grid-template-columns: 3fr .7fr .7fr 3fr;
+  display: flex;
+  width: 950px;
   gap:5px;
   padding: 0 5px;
-}
-.inventory__columns-name_eqip{
-  grid-template-columns: 3fr 1fr 3fr;
+  box-sizing: content-box;
 }
 
 .inventory__name-item{
@@ -482,19 +490,18 @@
 }
 
 .repeating_inventory {
-  display: grid;
-  width: 95%;
-  grid-template-columns: 3fr .7fr .7fr 3fr;
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
   margin: 0;
   padding: 5px;
   border:none;
   gap:5px;
-  
 }
 .repeating_gearlist{
-  display: grid;
-  width: 95%;
-  grid-template-columns: 3fr 1fr 3fr;
+  display: flex;
+  justify-content: space-between;
+  width: 950px;
   margin: 0;
   padding: 5px;
   border: none;
@@ -502,13 +509,13 @@
 }
 .repeating_stuff{
   display: grid;
-  width: 95%;
-  grid-template-columns: repeat(4, 1fr);
+  width: 950px;
+  grid-template-columns: repeat(4, 210px);
   margin: 0 auto 20px auto;
   padding: 5px;
   border: none;
 }
-
+/* 375 89 50 369 */
 .repeating_gearlist__input {
   font-family: 'Finlandica', sans-serif;
   outline: none;
@@ -520,7 +527,10 @@
   padding: 2px;
   font-size: 18px;
   height: 30px;
-  width: 100%;
+  width: 170px;
+}
+.repeating_gearlist__input_meloch{
+  width: 232px;
 }
 .repeating_gearlist__input:hover {
   background: #4d2c3155;
@@ -531,6 +541,30 @@
   background: #ffffff88;
   outline: 0;
 }
+.inventory__name-item_name{
+  width: 382px;
+}
+.repeating_gearlist__input_type_name{
+  width: 385px;
+}
+.inventory__name-item_type{
+  width: 90px;
+}
+.repeating_inventory__input_weapondice{
+  width: 50px;
+}
+.inventory__name-item_dmg{
+  width: 80px;
+}
+.repeating_inventory__input_type_quality{
+  width: 375px;
+}
+.inventory__name-item_eq_name{
+  width: 385px;
+}
+.inventory__name-item_eq_sum{
+  width: 171px;
+}
 
 .repeating_inventory__select {
   font-family: 'Finlandica', sans-serif;
@@ -539,6 +573,7 @@
   cursor: pointer;
   font-size: 20px;
   text-align: start;
+  width: 89px;
 }
 .repeating_inventory__select:hover {
   background: #4d2c3155;
@@ -552,9 +587,6 @@
   flex-direction: row;
   gap: 3px;
 }
-.repeating_inventory__input_weapondice{
-  width: calc(100% - 33px);
-}
 .inventory__button{
   font-family: 'Finlandica', sans-serif;
   background: transparent;
@@ -567,9 +599,6 @@
 }
 .inventory__button:hover {
   background-color:#4d2c3155;
-}
-.inventory__button::before {
-  content: ' ';
 }
 /* ------------------------------------------------- */
 .sheet-rolltemplate-customcheck,

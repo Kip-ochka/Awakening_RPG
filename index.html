@@ -81,56 +81,55 @@
       <div class="attribute">
   
         <div class="attribute__wrapper">
-          <div class="background"></div>
-          <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str" 
+          <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
           Крепость
           </button>
          <input type="number" name="attr_str" class="attribute__input">
          <div class="attribute__button-wrapper">
-            <button type='roll' name='attr_rollstradv' class="button button__advantage" 
+            <button type='roll' name='attr_rollstradv' class="button button__advantage btn" 
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}">
             + </button>
-            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage "
+            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}">
             - </button>
           </div>
         </div>
         
         <div class="attribute__wrapper">
-          <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil" 
+          <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
           Ловкость
           </button>
           <input type="number" name="attr_dex" class="attribute__input">
           <div class="attribute__button-wrapper">
-          <button type='roll' name='attr_rolldexadv' class="button button__advantage"
+          <button type='roll' name='attr_rolldexadv' class="button button__advantage btn"
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}">
             + </button>
-            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage"
+            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}">
             - </button>
           </div> 
         </div>
   
         <div class="attribute__wrapper">
-          <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int" 
+          <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">
           Интеллект
           </button>
           <input type="number" name="attr_int" class="attribute__input">
           <div class="attribute__button-wrapper">
-            <button type='roll' name='attr_rollintadv' class="button button__advantage"
+            <button type='roll' name='attr_rollintadv' class="button button__advantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}">
             + </button>
-            <button type='roll' name='attr_rollintdis' class="button button__disadvantage"
+            <button type='roll' name='attr_rollintdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}">
             - </button>
           </div>
         </div>
   
-        <div class="attribute__wrapper">
-          <button type='roll' name='init_attrs_roll' class="button button__attribute button__attribute_init-char"
+        <div class="attribute__wrapper attribute__wrapper_small">
+          <button type='roll' name='init_attrs_roll' class="button button__attribute button__attribute_init-char btn"
                   value="&{template:init} {{name=@{name}}} {{str-init=[[3d6kl1+10]]}} {{dex-init=[[3d6kl1+10]]}} {{int-init=[[3d6kl1+10]]}} {{hp-init=[[1d8+2]]}} {{talon-init=[[2d6*10]]}}">
               Стартовые аттрибуты</button>
         </div>
@@ -154,10 +153,10 @@
             </p>
             <input type="number" class="char-feature__input" name="attr_mhp">
           </div>
-          <button type='roll' class="char-feature__button" name='healing_roll'
+          <button type='roll' class="char-feature__button btn" name='healing_roll'
           value="&{template:healing} {{name=@{name}}} {{result=[[1d8+@{level}]]}}">
             Лечение</button>
-          <button type='roll' class="char-feature__button" name='hp_level_roll'
+          <button type='roll' class="char-feature__button btn" name='hp_level_roll'
             value="&{template:hplevel} {{name=@{name}}} {{result=[[1d8]]}}">
             Уровень</button>
         </div>
@@ -166,7 +165,7 @@
           <p class="char-feature__title">
             ТТХ.
           </p>
-          <button type='roll' class="char-feature__button" name='rank_init_roll'
+          <button type='roll' class="char-feature__button btn" name='rank_init_roll'
             value="&{template:rankinit} {{name=@{name}}} {{result=[[1d6+@{rank}]]}}">
             Инициатива</button>
           <div class="char-features__input-wrapper">
@@ -176,14 +175,14 @@
             <input type="number" class="char-feature__input"  name="attr_ac">
           </div>
           <div class="char-feature__button-wrapper">
-          <button type='roll' name="sheet-rank_def_meele_roll" class="char-feature__button char-feature__button_half"
+          <button type='roll' name="sheet-rank_def_meele_roll" class="char-feature__button char-feature__button_half btn"
             value="&{template:defense} {{name=@{name}}} {{naming_attr=защищается в рукопашной}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
             Оборона</button>
-          <button type='roll' name="sheet-rank_def_fire_roll" class="char-feature__button char-feature__button_half"
+          <button type='roll' name="sheet-rank_def_fire_roll" class="char-feature__button char-feature__button_half btn"
             value="&{template:defense} {{name=@{name}}} {{naming_attr=маневрирует и уклоняется}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
             Маневр</button>
           </div>
-          <button type='roll' name="sheet-rank_death_roll" class="char-feature__button"
+          <button type='roll' name="sheet-rank_death_roll" class="char-feature__button btn"
             value="&{template:death} {{name=@{name}}} {{result=[[1d6]]}} {{alive=[[1d4]]}} {{unconscious=[[3d6]]}} {{shocked=[[1d6]]}} {{broken=[[1d6+2]]}}">
             Выбывание</button>
         </div>
@@ -197,13 +196,13 @@
             </p>
             <input type="number" class="char-feature__input" name="attr_tal">
             </div>
-            <button type='roll' name="sheet-mass_order_roll" class="char-feature__button"
+            <button type='roll' name="sheet-mass_order_roll" class="char-feature__button btn"
               value="&{template:massorder} {{name=@{name}}} {{price=[[1d6*10]]}}">
               Массовое</button>
-            <button type='roll' name="sheet-uniq_order_roll" class="char-feature__button"
+            <button type='roll' name="sheet-uniq_order_roll" class="char-feature__button btn"
               value="&{template:uniqorder} {{name=@{name}}} {{price=[[3d6*10]]}} {{time=[[1d6]]}}">
               Заказное</button>
-            <button type='roll' name="sheet-problem_order_roll" class="char-feature__button"
+            <button type='roll' name="sheet-problem_order_roll" class="char-feature__button btn"
               value="&{template:problemorder} {{name=@{name}}} {{price=[[6d6*10]]}} {{time=[[3d6]]}}">
               Проблемное</button>
           </div>
@@ -216,10 +215,10 @@
       <div class="oddities__section oddities__section_type_psycho">
         <p class="oddities__title">Ужас и психозы</p>
           <div class="odities__control-wrapper">
-          <button type="roll" name="sheet-fear_roll" class="oddities__button" 
+          <button type="roll" name="sheet-fear_roll" class="oddities__button btn" 
           value="&{template:fear} {{name=@{name}}} {{fight=[[1d6]]}} {{out=[[1d6*10]]}}">
           Ужас</button>
-          <button type="roll" name="sheet-psycho_roll" class="oddities__button" 
+          <button type="roll" name="sheet-psycho_roll" class="oddities__button btn" 
           value="&{template:ps} {{name=@{name}}} {{result=[[1d6]]}}{{panic=[[1d4]]}}">
           Психозы</button>
         </div>
@@ -253,11 +252,11 @@
     <div class="inventory">
       <div class="inventory__weapon">
         <p class="inventory__title">ВООРУЖЕНИЕ</p>
-          <div class="inventory__columns-name">
-            <p class="inventory__name-item">Наименование</p>
-            <p class="inventory__name-item">Тип</p>
-            <p class="inventory__name-item">Урон</p>
-            <p class="inventory__name-item">Качества</p>
+          <div class="inventory__columns-name inventory__columns-name_weapon">
+            <p class="inventory__name-item inventory__name-item_name">Наименование</p>
+            <p class="inventory__name-item inventory__name-item_type">Тип</p>
+            <p class="inventory__name-item inventory__name-item_dmg">Урон</p>
+            <p class="inventory__name-item inventory__name-item_quty">Качества</p>
           </div>
   
         <fieldset class="repeating_inventory">
@@ -269,7 +268,7 @@
   
         <div class="inventory__weapondice-wrapper">
           <input class="repeating_gearlist__input repeating_inventory__input_weapondice" type="text" name="attr_weapondice">
-          <button type="roll" name="atck_roll" class="inventory__button"
+          <button type="roll" name="atck_roll" class="inventory__button btn button"
           value="&{template:atck} {{name=@{name}}} {{weaponname=@{weapon}}}{{dmg=[[1d@{weapondice}]]}} {{check=[[@{atcktype}]]}} {{result=[[1d20]]}}">
             <span style="font-family: 'Pictos Custom'">[
             </span>
@@ -281,10 +280,10 @@
   
         <div class="inventory__equipment">
           <p class="inventory__title">ЭКИПИРОВКА</p>
-          <div class="inventory__columns-name inventory__columns-name_eqip">
-            <p class="inventory__name-item">Наименование</p>
-            <p class="inventory__name-item">Количество</p>
-            <p class="inventory__name-item">Качества</p>
+          <div class="inventory__columns-name inventory__columns-name_equip">
+            <p class="inventory__name-item inventory__name-item_eq_name">Наименование</p>
+            <p class="inventory__name-item inventory__name-item_eq_sum">Количество</p>
+            <p class="inventory__name-item inventory__name-item_eq_quty">Качества</p>
           </div>
           <fieldset class="repeating_gearlist">
             <input class="repeating_gearlist__input repeating_gearlist__input_type_name" type="text" name="attr_gear">
@@ -297,7 +296,7 @@
           <p class="inventory__title">МЕЛОЧЕВКА
           </p>
         <fieldset class="repeating_stuff">
-          <input type="text" class="repeating_gearlist__input" name="attr_stuff">
+          <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
         </fieldset>
       </div>
 
