@@ -154,12 +154,7 @@
   display: flex;
   max-width: 100%;
   gap:1px;
-<<<<<<< HEAD:awakening.css
-  position: relative;
-  z-index: 1;
-=======
   background-color:#ffffff50;
->>>>>>> 09277a0adb613dc027a5ef62de015f5cc5992eae:style.css
 }
 
 .button {
@@ -579,8 +574,6 @@
   content: ' ';
 }
 /* ------------------------------------------------- */
-
-<<<<<<< HEAD:awakening.css
 .sheet-rolltemplate-customcheck,
 .sheet-rolltemplate-init,
 .sheet-rolltemplate-healing,
@@ -595,11 +588,6 @@
 .sheet-rolltemplate-atck
 {
   background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
-=======
-.sheet-rolltemplate-customcheck, .sheet-rolltemplate-init , .sheet-rolltemplate-healing , .sheet-rolltemplate-hplevel , .sheet-rolltemplate-defense , .sheet-rolltemplate-death , .sheet-rolltemplate-massorder , .sheet-rolltemplate-uniqorder, .sheet-rolltemplate-problemorder , .sheet-rolltemplate-fear , .sheet-rolltemplate-ps , .sheet-rolltemplate-atck{
-  display: none;
-  background-image:url(./images/awakening_bottom_background.jpg);
->>>>>>> 09277a0adb613dc027a5ef62de015f5cc5992eae:style.css
 }
 
 .sheet-rolltemplate-atck,
