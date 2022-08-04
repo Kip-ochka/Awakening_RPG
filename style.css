@@ -488,8 +488,12 @@
   margin: 0;
   padding: 0;
 }
-
-.repeating_inventory {
+.repeating_inventory{
+  border:none;
+  margin: 0;
+  padding: 0;
+}
+.repeating-inventory-item{
   display: flex;
   justify-content: space-between;
   width: 950px;
@@ -499,8 +503,13 @@
   gap:5px;
 }
 .repeating_gearlist{
+  border:none;
+  margin: 0;
+  padding: 0;
+}
+.repeating-gearlist-item{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 950px;
   margin: 0;
   padding: 5px;
@@ -508,14 +517,22 @@
   gap:5px;
 }
 .repeating_stuff{
-  display: grid;
+  border:none;
   width: 950px;
-  grid-template-columns: repeat(4, 210px);
+  margin: 0;
+  padding: 0;
+}
+.repeating-stuff-item{
+  display: grid;
+  justify-content: center;
+  width: 950px;
+  grid-template-columns: repeat(4, 234px);
   margin: 0 auto 20px auto;
   padding: 5px;
   border: none;
+  gap:1px;
 }
-/* 375 89 50 369 */
+
 .repeating_gearlist__input {
   font-family: 'Finlandica', sans-serif;
   outline: none;
@@ -696,4 +713,17 @@ sheet-rolltemplate-mut
     background-color: transparent;
     border: none;
     color: black;
+}
+
+.charsheet button[type="roll"]::before{
+  content:'';
+}
+
+input, textarea, select, .uneditable-input{
+  margin: 0;
+}
+
+.largedialog textarea{
+  width: 442px;
+  height: 90px;
 }

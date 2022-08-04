@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./style.css">
   <title>Document</title>
 </head>
-<body> -->
-<div class="main__wrapper">
+<body>
+<div class="main__wrapper charsheet">
 
     <div class="header">
       <img src="https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_banner.png" alt="Лого Пробуждения" class="header__image">
@@ -260,6 +260,7 @@
           </div>
   
         <fieldset class="repeating_inventory">
+          <div class="repeating-inventory-item">
           <input class="repeating_gearlist__input repeating_gearlist__input_type_name" type="text" name="attr_weapon">
           <select class="repeating_inventory__select" name="attr_atcktype">
             <option value="@{dex}" selected="selected">Стрлк.</option>
@@ -275,6 +276,7 @@
           </button>
           </div>
           <input class="repeating_gearlist__input repeating_inventory__input_type_quality" type="text" name="attr_weaponattrs">
+        </div>
         </fieldset>
       </div>
   
@@ -282,29 +284,41 @@
           <p class="inventory__title">ЭКИПИРОВКА</p>
           <div class="inventory__columns-name inventory__columns-name_equip">
             <p class="inventory__name-item inventory__name-item_eq_name">Наименование</p>
-            <p class="inventory__name-item inventory__name-item_eq_sum">Количество</p>
+            <p class="inventory__name-item inventory__name-item_eq_sum">Кол-во</p>
             <p class="inventory__name-item inventory__name-item_eq_quty">Качества</p>
           </div>
+          
           <fieldset class="repeating_gearlist">
+            <div class="repeating-gearlist-item">
             <input class="repeating_gearlist__input repeating_gearlist__input_type_name" type="text" name="attr_gear">
             <input class="repeating_gearlist__input repeating_gearlist__number" type="number" name="attr_gearamount">
             <input class="repeating_gearlist__input repeating_inventory__input_type_quality" type="text" name="attr_gearattrs">
+            </div>
         </fieldset>
-        </div>
-  
+
         <div class="inventory__small-items">
           <p class="inventory__title">МЕЛОЧЕВКА
           </p>
         <fieldset class="repeating_stuff">
-          <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+          <div class="repeating-stuff-item">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
+          </div>
+        </div>
         </fieldset>
       </div>
 
     </div>
 
 </div>
-<!-- </body>
-</html> -->
+</body>
+</html>
 
 <rolltemplate class="sheet-rolltemplate-init">
   <div>{{name}} определяет стартовые аттрибуты:</div>
