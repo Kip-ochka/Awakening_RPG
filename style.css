@@ -13,18 +13,6 @@
   margin: 0 auto 20px;
 }
 
-.background {
-  content: '';
-  background-color: #fff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: block;
-  z-index: -1;
-  opacity: .4;
-}
-
 .header {
   margin: 0;
   padding: 0;
@@ -232,7 +220,6 @@
   gap: 10px;
   margin-top: 20px;
   padding: 0;
-  background-color:#ffffff50;
 }
 
 .char-feature {
@@ -244,6 +231,7 @@
   gap:9px 0;
   padding-bottom: 3px;
   max-height: 350px;
+  background-color:#ffffff50;
 }
 
 .char-feature__title{
