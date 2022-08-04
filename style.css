@@ -364,7 +364,7 @@
   font-size: 24px;
   width: 95%;
   margin: 0 auto;
-  padding: 10px 0 0 0;
+  padding: 30px 0 10px 0;
 }
 
 .odities__control-wrapper {
@@ -562,7 +562,7 @@
   width: 382px;
 }
 .repeating_gearlist__input_type_name{
-  width: 385px;
+  width: 390px;
 }
 .inventory__name-item_type{
   width: 90px;
@@ -577,10 +577,10 @@
   width: 375px;
 }
 .inventory__name-item_eq_name{
-  width: 385px;
+  width: 380px;
 }
 .inventory__name-item_eq_sum{
-  width: 171px;
+  width: 62px;
 }
 
 .repeating_inventory__select {
@@ -631,8 +631,8 @@
 .sheet-rolltemplate-fear,
 .sheet-rolltemplate-ps,
 .sheet-rolltemplate-atck,
-sheet-rolltemplate-rankinit,
-sheet-rolltemplate-mut
+.sheet-rolltemplate-rankinit,
+.sheet-rolltemplate-mut
 {
   background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
 }
@@ -737,9 +737,9 @@ input[type="file"]{
   height: 36px;
 }
 
-.ui-dialog input[type="text"] {
+/* .ui-dialog input[type="text"] {
   height: 36px;
-}
+} */
 
 .ui-dialog .charsheet input[type="number"] {
   width: 3em;
