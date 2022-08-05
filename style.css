@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 .main__wrapper {
-  font-family: 'Finlandica', sans-serif;
-  background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_top_background.png), url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
+  font-family: "Finlandica", sans-serif;
+  background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_top_background.png),
+    url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
   background-repeat: no-repeat, repeat;
   background-position: center, left top;
   background-size: 40%, auto;
@@ -20,14 +21,14 @@
   font-size: 0;
 }
 
-.header__image{
+.header__image {
   width: 100%;
   max-height: 150px;
 }
 .info {
   margin: 0;
   padding: 20px 0 0 0;
-  
+
   width: 1000px;
 }
 
@@ -54,8 +55,8 @@
   height: 35px;
 }
 .info__wrapper_name_level {
- width: 160px;
- height: 35px;
+  width: 160px;
+  height: 35px;
 }
 .info__wrapper_name_age {
   width: 160px;
@@ -75,7 +76,7 @@
 }
 
 .info__label {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 24px;
   margin: 0;
@@ -83,7 +84,7 @@
 }
 
 .info__input {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -107,7 +108,7 @@
 }
 
 .info__selects {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   background: #ffffff88;
   width: 100%;
   height: 100%;
@@ -124,7 +125,7 @@
 }
 
 .info__selects {
-  border-radius:3px;
+  border-radius: 3px;
   width: 100%;
 }
 /*------------------------------*/
@@ -135,7 +136,6 @@
   grid-template-rows: 350px;
   grid-template-columns: 284px auto;
   column-gap: 10px;
-  
 }
 /* тут меняется линия на грид */
 .attribute {
@@ -144,44 +144,43 @@
   margin: 20px 0 0 0;
   padding: 0;
   gap: 10px;
-  
 }
 
-.attribute__wrapper{
+.attribute__wrapper {
   display: flex;
   width: 280px;
   height: 80px;
-  gap:1px;
-  background-color:#ffffff50;
+  gap: 1px;
+  background-color: #ffffff50;
 }
-.attribute__wrapper_small{
-  height: 50px;
+.attribute__wrapper_small {
+  height: 63px;
 }
 .button {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   background: transparent;
   border: 1px solid #bebebe;
   border-radius: 3px;
-  cursor:pointer;
+  cursor: pointer;
 }
 .button:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 .btn::before {
-  content: '';
+  content: "";
 }
 .btn::after {
-  content: '';
+  content: "";
 }
 
 .button__attribute {
   font-size: 24px;
   width: 150px;
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
 }
 
 .attribute__input {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -196,7 +195,7 @@
 }
 
 .attribute__input:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 
 .attribute__input:focus {
@@ -210,25 +209,25 @@
   display: flex;
   flex-direction: column;
   width: 67px;
-  gap:1px;
+  gap: 1px;
 }
 .button__advantage {
   height: 50%;
   width: 59px;
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
 }
 .button__disadvantage {
   height: 50%;
   width: 59px;
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
 }
 .button__attribute_init-char {
   width: 100%;
-  height: 50px;
+  height: 59px;
 }
 
 .char-features {
@@ -243,30 +242,32 @@
 .char-feature {
   display: flex;
   width: 208px;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
   border: 1px solid #ccc;
-  border-radius:3px;
-  gap:9px 0;
+  border-radius: 3px;
+  gap: 9px 0;
   padding-bottom: 3px;
   height: 328px;
-  background-color:#ffffff50;
+  background-color: #ffffff50;
+}
+.char-feature:last-child {
+  margin-bottom: 10px;
 }
 
-.char-feature__title{
-  font-family: 'Finlandica', sans-serif;
+.char-feature__title {
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 24px;
   text-align: center;
   min-height: 54px;
   width: 95%;
-  padding: 14px 0 0 0;
   margin: 14px 0 0 0;
   justify-content: center;
 }
 
 .char-feature__label {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 24px;
   padding: 0;
@@ -275,14 +276,14 @@
 
 .char-features__input-wrapper {
   display: grid;
-  align-items:center;
+  align-items: center;
   grid-template-columns: 116px auto;
   gap: 0 5px;
   height: 50px;
 }
 
 .char-feature__input {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -295,7 +296,7 @@
   height: 50px;
 }
 .char-feature__input:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 .char-feature__input:focus {
   border-color: #bdbdbd;
@@ -305,34 +306,38 @@
 }
 
 .char-feature__button {
-  font-family: 'Finlandica', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-family: "Finlandica", sans-serif;
   background: transparent;
   background-color: transparent;
   border-radius: 3px;
   cursor: pointer;
   width: 183px;
   font-size: 24px;
-  height:50px;
+  height: 50px;
   border: 1px solid #ccc;
 }
 .char-feature__button:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 
-.button__attribute_init-char{
+.button__attribute_init-char {
   width: 279px;
 }
-.char-feature__button-wrapper{
+.char-feature__button-wrapper {
   display: flex;
   width: 95%;
   justify-content: space-between;
-  gap:0 1px;
+  gap: 0 1px;
 }
 
 .char-feature__button_half {
   padding: 0 1px 0;
   width: 100px;
-
+  font-size: 18px;
 }
 
 .oddities {
@@ -348,18 +353,18 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 460px;
+  width: 466px;
   min-height: 210px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   gap: 10px;
   border: 1px solid #bebebe;
   border-radius: 3px;
-  background-color:#ffffff50;
+  background-color: #ffffff50;
 }
 
-.oddities__title{
-  font-family: 'Finlandica', sans-serif;
+.oddities__title {
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 24px;
   width: 95%;
@@ -378,30 +383,31 @@
 }
 
 .oddities__button {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   background: transparent;
   background-color: transparent;
   border: 1px solid #bebebe;
   border-radius: 3px;
   cursor: pointer;
   width: 135px;
-  font-size: 24px;
-  height:50px;
+  font-size: 21px;
+  height: 50px;
 }
 .oddities__button:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 .oddities__button::before {
-  content: ' ';
+  content: " ";
 }
 .oddities__label {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin: 0;
 }
 
 .oddities__select {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -412,7 +418,6 @@
   font-size: 24px;
   height: 56px;
   width: 56px;
-
 }
 .oddities__select:hover {
   background: #4d2c3155;
@@ -427,7 +432,7 @@
   margin: 0 auto 10px;
   padding: 0;
   resize: none;
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -435,11 +440,11 @@
   background: #ffffff88;
 }
 .oddities__textarea:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 .oddities__textarea:focus {
   box-shadow: 0 0 0 0.2rem #bebebe80;
-  background:#fff;
+  background: #fff;
 }
 
 .inventory {
@@ -449,11 +454,11 @@
   margin: 0 auto;
   justify-content: center;
   border: 1px solid #ccc;
-  border-radius:3px;
+  border-radius: 3px;
   margin: 20px auto;
-  background-color:#ffffff50;
+  background-color: #ffffff50;
 }
-.inventory__weapon{
+.inventory__weapon {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -465,76 +470,77 @@
 }
 
 .inventory__title {
-  width: 950px;
-  font-family: 'Finlandica', sans-serif;
+  width: 918px;
+  font-family: "Finlandica", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  padding: 10px 0 0 0;
-  margin: 0;
+  padding: 0;
   text-align: center;
+  margin: 20px 0 10px 0;
 }
 
 .inventory__columns-name {
   display: flex;
-  width: 950px;
-  gap:5px;
+  width: 919px;
+  gap: 5px;
   padding: 0 5px;
   box-sizing: content-box;
 }
 
-.inventory__name-item{
-  font-family: 'Finlandica', sans-serif;
+.inventory__name-item {
+  font-family: "Finlandica", sans-serif;
   font-size: 20px;
   margin: 0;
   padding: 0;
 }
-.repeating_inventory{
-  border:none;
+.repeating_inventory {
+  border: none;
   margin: 0;
   padding: 0;
 }
-.repeating-inventory-item{
+.repeating-inventory-item {
   display: flex;
-  justify-content: space-between;
-  width: 950px;
-  margin: 0;
-  padding: 5px;
-  border:none;
-  gap:5px;
-}
-.repeating_gearlist{
-  border:none;
-  margin: 0;
-  padding: 0;
-}
-.repeating-gearlist-item{
-  display: flex;
-  justify-content: center;
-  width: 950px;
+  width: 918px;
+  height: 36px;
   margin: 0;
   padding: 5px;
   border: none;
-  gap:5px;
+  gap: 5px;
 }
-.repeating_stuff{
-  border:none;
-  width: 950px;
+.repeating_gearlist {
+  border: none;
   margin: 0;
   padding: 0;
 }
-.repeating-stuff-item{
+.repeating-gearlist-item {
+  display: flex;
+  justify-content: center;
+  width: 918px;
+  height: 36px;
+  margin: 0;
+  padding: 5px;
+  border: none;
+  gap: 5px;
+}
+.repeating_stuff {
+  border: none;
+  width: 918px;
+  margin: 0;
+  padding: 0;
+}
+.repeating-stuff-item {
   display: grid;
   justify-content: center;
-  width: 950px;
-  grid-template-columns: repeat(4, 234px);
+  width: 918px;
+  grid-template-columns: repeat(4, 229px);
   margin: 0 auto 20px auto;
   padding: 5px;
   border: none;
-  gap:1px;
+  gap: 1px;
 }
 
 .repeating_gearlist__input {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -546,8 +552,8 @@
   height: 30px;
   width: 170px;
 }
-.repeating_gearlist__input_meloch{
-  width: 232px;
+.repeating_gearlist__input_meloch {
+  width: 229px;
 }
 .repeating_gearlist__input:hover {
   background: #4d2c3155;
@@ -558,33 +564,33 @@
   background: #ffffff88;
   outline: 0;
 }
-.inventory__name-item_name{
-  width: 382px;
+.inventory__name-item_name {
+  width: 402px;
 }
-.repeating_gearlist__input_type_name{
-  width: 390px;
+.repeating_gearlist__input_type_name {
+  width: 480px;
 }
-.inventory__name-item_type{
+.inventory__name-item_type {
   width: 90px;
 }
-.repeating_inventory__input_weapondice{
+.repeating_inventory__input_weapondice {
   width: 50px;
 }
-.inventory__name-item_dmg{
-  width: 80px;
+.inventory__name-item_dmg {
+  width: 103x;
 }
-.repeating_inventory__input_type_quality{
+.repeating_inventory__input_type_quality {
   width: 375px;
 }
-.inventory__name-item_eq_name{
-  width: 380px;
+.inventory__name-item_eq_name {
+  width: 480px;
 }
-.inventory__name-item_eq_sum{
-  width: 62px;
+.inventory__name-item_eq_sum {
+  width: 59px;
 }
 
 .repeating_inventory__select {
-  font-family: 'Finlandica', sans-serif;
+  font-family: "Finlandica", sans-serif;
   background: #ffffff88;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -600,23 +606,24 @@
   background: #ffffff88;
 }
 /* ---------------------------------------------- */
-.inventory__weapondice-wrapper{
+.inventory__weapondice-wrapper {
   display: flex;
   flex-direction: row;
   gap: 3px;
 }
-.inventory__button{
-  font-family: 'Finlandica', sans-serif;
+.inventory__button {
+  font-family: "Finlandica", sans-serif;
   background: transparent;
   border: 1px solid #bebebe;
   border-radius: 3px;
-  cursor:pointer;
-  width: 30px;
+  cursor: pointer;
+  width: 44px;
   height: 30px;
   margin: 0;
+  font-size: 18px;
 }
 .inventory__button:hover {
-  background-color:#4d2c3155;
+  background-color: #4d2c3155;
 }
 /* ------------------------------------------------- */
 .sheet-rolltemplate-customcheck,
@@ -632,27 +639,25 @@
 .sheet-rolltemplate-ps,
 .sheet-rolltemplate-atck,
 .sheet-rolltemplate-rankinit,
-.sheet-rolltemplate-mut
-{
+.sheet-rolltemplate-mut {
   background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
 }
 
 .sheet-rolltemplate-atck,
 .sheet-rolltemplate-defense,
-.sheet-rolltemplate-customcheck 
-{
+.sheet-rolltemplate-customcheck {
   background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
   text-align: center;
 }
 
 .sheet-rolltemplate-atck .inlinerollresult.fullfail,
 .sheet-rolltemplate-defense .inlinerollresult.fullfail {
-    border: green 2px solid;
+  border: green 2px solid;
 }
 
 .sheet-rolltemplate-atck .inlinerollresult.fullcrit,
 .sheet-rolltemplate-defense .inlinerollresult.fullcrit {
-    border: red 2px solid;
+  border: red 2px solid;
 }
 
 .sheet-rolltemplate-mut .inlinerollresult,
@@ -711,31 +716,34 @@
 .sheet-rolltemplate-customcheck .inlinerollresult.fullfail,
 .sheet-rolltemplate-customcheck .inlinerollresult.fullcrit,
 .sheet-rolltemplate-customcheck .inlinerollresult.importantroll {
-    background-color: transparent;
-    border: none;
-    color: black;
+  background-color: transparent;
+  border: none;
+  color: black;
 }
 
-.charsheet button[type="roll"]::before{
-  content:'';
+.charsheet button[type="roll"]::before {
+  content: "";
 }
 
-input, textarea, select, .uneditable-input{
+input,
+textarea,
+select,
+.uneditable-input {
   margin: 0;
 }
 
-.largedialog textarea{
+.largedialog textarea {
   width: 442px;
   height: 90px;
 }
 
-input[type="file"]{
+input[type="file"] {
   height: 36px;
 }
 
-.ui-dialog .charsheet input {
+/* .ui-dialog .charsheet input {
   height: 36px;
-}
+} */
 
 /* .ui-dialog input[type="text"] {
   height: 36px;
@@ -743,4 +751,14 @@ input[type="file"]{
 
 .ui-dialog .charsheet input[type="number"] {
   width: 3em;
+}
+.ui-dialog .charsheet {
+  padding: 0px;
+}
+
+.ui-dialog .charsheet button[type="roll"],
+.ui-dialog .charsheet button[type="compendium"] {
+  padding: 2px 3px;
+  font-size: 1.3em;
+  margin: 0;
 }
