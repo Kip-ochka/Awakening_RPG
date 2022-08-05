@@ -88,9 +88,9 @@
          <input type="number" name="attr_str" class="attribute__input">
          <div class="attribute__button-wrapper">
             <button type='roll' name='attr_rollstradv' class="button button__advantage btn" 
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}">+</button>
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}"> + </button>
             <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}">-</button>
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div>
         </div>
         
@@ -102,9 +102,9 @@
           <input type="number" name="attr_dex" class="attribute__input">
           <div class="attribute__button-wrapper">
           <button type='roll' name='attr_rolldexadv' class="button button__advantage btn"
-          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}">+</button>
+          value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}"> + </button>
             <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}">-</button>
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div> 
         </div>
   
@@ -116,9 +116,9 @@
           <input type="number" name="attr_int" class="attribute__input">
           <div class="attribute__button-wrapper">
             <button type='roll' name='attr_rollintadv' class="button button__advantage btn"
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}">+</button>
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}"> + </button>
             <button type='roll' name='attr_rollintdis' class="button button__disadvantage btn"
-            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}">-</button>
+            value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div>
         </div>
   
@@ -245,7 +245,7 @@
   
     <div class="inventory">
       <div class="inventory__weapon">
-        <p class="inventory__title">ВООРУЖЕНИЕ</p>
+        <p class="inventory__title inventory__title_weapon">ВООРУЖЕНИЕ</p>
           <div class="inventory__columns-name inventory__columns-name_weapon">
             <p class="inventory__name-item inventory__name-item_name">Наименование</p>
             <p class="inventory__name-item inventory__name-item_type">Тип</p>
@@ -275,7 +275,7 @@
       </div>
   
         <div class="inventory__equipment">
-          <p class="inventory__title">ЭКИПИРОВКА</p>
+          <p class="inventory__title inventory__title_eqp">ЭКИПИРОВКА</p>
           <div class="inventory__columns-name inventory__columns-name_equip">
             <p class="inventory__name-item inventory__name-item_eq_name">Наименование</p>
             <p class="inventory__name-item inventory__name-item_eq_sum">Кол-во</p>
@@ -291,17 +291,10 @@
         </fieldset>
 
         <div class="inventory__small-items">
-          <p class="inventory__title">МЕЛОЧЕВКА
+          <p class="inventory__title inventory__title_staff">МЕЛОЧЕВКА
           </p>
         <fieldset class="repeating_stuff">
           <div class="repeating-stuff-item">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
-            <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
             <input type="text" class="repeating_gearlist__input repeating_gearlist__input_meloch" name="attr_stuff">
           </div>
         </div>

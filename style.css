@@ -476,7 +476,16 @@
   font-size: 24px;
   padding: 0;
   text-align: center;
-  margin: 20px 0 10px 0;
+}
+
+.inventory__title_weapon{
+  margin: 10px 0 30px 0;
+}
+.inventory__title_eqp{
+  margin: 30px 0 30px 0;
+}
+.inventory__title_staff{
+  margin: 30px 0 30px 0;
 }
 
 .inventory__columns-name {
