@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 .main__wrapper {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background-image: url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_top_background.png),
     url(https://raw.githubusercontent.com/Kip-ochka/Awakening_RPG/main/images/awakening_bottom_background.jpg);
   background-repeat: no-repeat, repeat;
@@ -76,7 +76,7 @@
 }
 
 .info__label {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
   margin: 0;
@@ -84,7 +84,7 @@
 }
 
 .info__input {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -108,7 +108,7 @@
 }
 
 .info__selects {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: #ffffff88;
   width: 100%;
   height: 100%;
@@ -157,7 +157,7 @@
   height: 63px;
 }
 .button {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: transparent;
   border: 1px solid #bebebe;
   border-radius: 3px;
@@ -167,20 +167,20 @@
   background-color: #4d2c3155;
 }
 .btn::before {
-  content: "";
+  content: '';
 }
 .btn::after {
-  content: "";
+  content: '';
 }
 
 .button__attribute {
   font-size: 24px;
   width: 150px;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
 }
 
 .attribute__input {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -216,14 +216,14 @@
   width: 59px;
   font-size: 24px;
   font-weight: 400;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
 }
 .button__disadvantage {
   height: 50%;
   width: 59px;
   font-size: 24px;
   font-weight: 400;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
 }
 .button__attribute_init-char {
   width: 100%;
@@ -256,7 +256,7 @@
 }
 
 .char-feature__title {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
   text-align: center;
@@ -267,7 +267,7 @@
 }
 
 .char-feature__label {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
   padding: 0;
@@ -283,7 +283,7 @@
 }
 
 .char-feature__input {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -310,7 +310,7 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: transparent;
   background-color: transparent;
   border-radius: 3px;
@@ -364,7 +364,7 @@
 }
 
 .oddities__title {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
   width: 95%;
@@ -383,7 +383,7 @@
 }
 
 .oddities__button {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: transparent;
   background-color: transparent;
   border: 1px solid #bebebe;
@@ -397,17 +397,17 @@
   background-color: #4d2c3155;
 }
 .oddities__button::before {
-  content: " ";
+  content: ' ';
 }
 .oddities__label {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 18px;
   margin: 0;
 }
 
 .oddities__select {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -432,7 +432,7 @@
   margin: 0 auto 10px;
   padding: 0;
   resize: none;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -471,20 +471,20 @@
 
 .inventory__title {
   width: 918px;
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-weight: 400;
   font-size: 24px;
   padding: 0;
   text-align: center;
 }
 
-.inventory__title_weapon{
+.inventory__title_weapon {
   margin: 10px 0 30px 0;
 }
-.inventory__title_eqp{
+.inventory__title_eqp {
   margin: 30px 0 30px 0;
 }
-.inventory__title_staff{
+.inventory__title_staff {
   margin: 30px 0 30px 0;
 }
 
@@ -497,7 +497,7 @@
 }
 
 .inventory__name-item {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   font-size: 20px;
   margin: 0;
   padding: 0;
@@ -532,24 +532,22 @@
   gap: 5px;
 }
 .repeating_stuff {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: none;
   width: 918px;
   margin: 0;
   padding: 0;
+  gap: 3px;
 }
 .repeating-stuff-item {
-  display: grid;
-  justify-content: center;
-  width: 918px;
-  grid-template-columns: repeat(4, 229px);
-  margin: 0 auto 20px auto;
   padding: 5px;
   border: none;
-  gap: 1px;
+  width: 220px;
 }
 
 .repeating_gearlist__input {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   outline: none;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -558,11 +556,11 @@
   text-align: left;
   padding: 2px;
   font-size: 18px;
-  height: 30px;
-  width: 170px;
+  height: 36px;
+  width: 100%;
 }
 .repeating_gearlist__input_meloch {
-  width: 229px;
+  width: 220px;
 }
 .repeating_gearlist__input:hover {
   background: #4d2c3155;
@@ -599,7 +597,7 @@
 }
 
 .repeating_inventory__select {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: #ffffff88;
   border: 1px solid #ccc;
   cursor: pointer;
@@ -621,7 +619,7 @@
   gap: 3px;
 }
 .inventory__button {
-  font-family: "Finlandica", sans-serif;
+  font-family: 'Finlandica', sans-serif;
   background: transparent;
   border: 1px solid #bebebe;
   border-radius: 3px;
@@ -730,8 +728,8 @@
   color: black;
 }
 
-.charsheet button[type="roll"]::before {
-  content: "";
+.charsheet button[type='roll']::before {
+  content: '';
 }
 
 input,
@@ -746,7 +744,7 @@ select,
   height: 90px;
 }
 
-input[type="file"] {
+input[type='file'] {
   height: 36px;
 }
 
@@ -758,15 +756,15 @@ input[type="file"] {
   height: 36px;
 } */
 
-.ui-dialog .charsheet input[type="number"] {
+.ui-dialog .charsheet input[type='number'] {
   width: 3em;
 }
 .ui-dialog .charsheet {
   padding: 0px;
 }
 
-.ui-dialog .charsheet button[type="roll"],
-.ui-dialog .charsheet button[type="compendium"] {
+.ui-dialog .charsheet button[type='roll'],
+.ui-dialog .charsheet button[type='compendium'] {
   padding: 2px 3px;
   font-size: 1.3em;
   margin: 0;
