@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>Document</title>
-</head>
-<body> -->
+</head> -->
+<body>
 <div class="main__wrapper charsheet">
 
     <div class="header">
@@ -81,49 +81,49 @@
       <div class="attribute">
   
         <div class="attribute__wrapper">
-          <button type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str btn" 
+          <button data-tooltip="Произвести проверку крепости" type='roll' name='attr_rollstr' class="button button__attribute button__attribute_str btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ}} {{check=[[@{str}]]}} {{result=[[1d20]]}}">
           Крепость
           </button>
          <input type="number" name="attr_str" class="attribute__input">
          <div class="attribute__button-wrapper">
-            <button type='roll' name='attr_rollstradv' class="button button__advantage btn" 
+            <button data-tooltip="Произвести проверку крепости с преимуществом" type='roll' name='attr_rollstradv' class="button button__advantage btn" 
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с преимуществом}} {{check=[[@{str}]]}} {{result=[[2d20kl1]]}}"> + </button>
-            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
+            <button data-tooltip="А вот и я!" type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=КРЕПОСТЬ с осложнением}} {{check=[[@{str}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div>
         </div>
         
         <div class="attribute__wrapper">
-          <button type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil btn" 
+          <button data-tooltip="А вот и я!" type='roll' name='attr_rolldex' class="button button__attribute button__attribute_agil btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ}} {{check=[[@{dex}]]}} {{result=[[1d20]]}}">
           Ловкость
           </button>
           <input type="number" name="attr_dex" class="attribute__input">
           <div class="attribute__button-wrapper">
-          <button type='roll' name='attr_rolldexadv' class="button button__advantage btn"
+          <button data-tooltip="А вот и я!" type='roll' name='attr_rolldexadv' class="button button__advantage btn"
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с преимуществом}} {{check=[[@{dex}]]}} {{result=[[2d20kl1]]}}"> + </button>
-            <button type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
+            <button data-tooltip="А вот и я!" type='roll' name='attr_rollstrdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ЛОВКОСТЬ с осложнением}} {{check=[[@{dex}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div> 
         </div>
   
         <div class="attribute__wrapper">
-          <button type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int btn" 
+          <button data-tooltip="А вот и я!" type='roll' name='attr_rollint' class="button  button__attribute button__attribute_int btn" 
           value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ}} {{check=[[@{int}]]}} {{result=[[1d20]]}}">
           Интеллект
           </button>
           <input type="number" name="attr_int" class="attribute__input">
           <div class="attribute__button-wrapper">
-            <button type='roll' name='attr_rollintadv' class="button button__advantage btn"
+            <button data-tooltip="А вот и я!" type='roll' name='attr_rollintadv' class="button button__advantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с преимуществом}} {{check=[[@{int}]]}} {{result=[[2d20kl1]]}}"> + </button>
-            <button type='roll' name='attr_rollintdis' class="button button__disadvantage btn"
+            <button data-tooltip="А вот и я!" type='roll' name='attr_rollintdis' class="button button__disadvantage btn"
             value="&{template:customcheck} {{name=@{name}}} {{naming_attr=ИНТЕЛЛЕКТ с осложнением}} {{check=[[@{int}]]}} {{result=[[2d20kh1]]}}"> - </button>
           </div>
         </div>
   
         <div class="attribute__wrapper attribute__wrapper_small">
-          <button type='roll' name='init_attrs_roll' class="button button__attribute button__attribute_init-char btn"
+          <button data-tooltip="А вот и я!" type='roll' name='init_attrs_roll' class="button button__attribute button__attribute_init-char btn"
                   value="&{template:init} {{name=@{name}}} {{str-init=[[3d6kl1+10]]}} {{dex-init=[[3d6kl1+10]]}} {{int-init=[[3d6kl1+10]]}} {{hp-init=[[1d8+2]]}} {{talon-init=[[2d6*10]]}}">
               Стартовые аттрибуты</button>
         </div>
