@@ -534,20 +534,11 @@
 .repeating_stuff {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
   border: none;
   width: 918px;
   margin: 0;
-  padding: 0;
-  gap: 3px;
-}
-.repeating-stuff-item {
-  padding: 20px 10px;
-  border: none;
-  width: 220px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 20px;
+  padding: 0 0 20px 0;
 }
 
 .repeating_gearlist__input {
@@ -558,13 +549,12 @@
   border-radius: 3px;
   background: #ffffff88;
   text-align: left;
-  padding: 2px;
+  padding: 4px;
   font-size: 18px;
-  height: 36px;
-  width: 100%;
 }
 .repeating_gearlist__input_meloch {
-  width: 220px;
+  width: 225px;
+  height: 36px;
 }
 .repeating_gearlist__input:hover {
   background: #4d2c3155;
