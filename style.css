@@ -541,9 +541,13 @@
   gap: 3px;
 }
 .repeating-stuff-item {
-  padding: 5px;
+  padding: 20px 10px;
   border: none;
   width: 220px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 .repeating_gearlist__input {
